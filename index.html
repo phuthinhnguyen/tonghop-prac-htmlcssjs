@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Sofia&effect=fire|emboss|outline|shadow-multiple|neon">
+	<title>Welcome to Deepcode</title>
+	<script type="text/javascript" src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+	<base target="_blank">
+	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+	<link rel="icon" type="text/css" href="ghost.png">
+	<style>
+		body {
+			background: #ffffff url(back.jpg) no-repeat center;
+			background-attachment: fixed;
+			counter-reset: section;
+		}
+		*{
+			box-sizing: border-box;
+		}
+		.spanquestion {
+			border-left: 10px solid red;
+			background: lightblue;
+			font-size: 30px;
+			margin-top: 10px;
+			margin-bottom: 100px;
+			margin-left: 50px;
+			padding: 10px;
+			font-family: Chiller;
+		}
+		.divtitle {
+			position: sticky;
+			top: 5px;
+			border: 3px inset ghostwhite;
+			background: black;
+			width: 300px;
+			text-align: center;
+			font-family: Agency FB;
+			font-size: 4em;
+			font-weight: bold;
+			direction: rtl;
+			unicode-bidi: bidi-override;
+			margin-left: auto;
+			margin-right: auto;
+			margin-top: 30px;
+			margin-bottom: 50px;
+		
+		}
+		.divalphabet{	
+				text-align: justify;
+				text-decoration-line: underline;
+				text-decoration-color: lightyellow;
+				text-decoration-style: groove;
+				text-decoration-thickness: 1px;
+				line-height: 30px;
+				letter-spacing: 2px;
+				word-spacing: 4px;
+				text-transform: capitalize;
+				text-align-last: justify;
+				font-family: Sofia,sans-serif;
+				font-weight: bold;
+				font-size: 1.5em;
+				font-style: oblique;
+				font-variant: small-caps;
+		}
+		.div1{
+				max-width: 500px;
+				min-width: 100px; 
+				border: 2px solid black; 
+				padding: 30px;
+				box-sizing: border-box;
+				margin: auto;
+				outline: 3px solid red; 
+				outline-offset: 5px;
+		}
+		a:link.a1,a:visited.a1{
+			width: 100px;
+			display: inline-block;
+			color: black;
+			border: 2px solid green;
+			background-color: white;
+			padding: 10px 8px;
+			text-align: center;
+			margin-left: 20px;
+			box-sizing: border-box;
+			text-decoration: none;
+		}
+		a:hover.a1, a:active.a1{
+			width: 100px;
+			text-align: center;
+			margin-left: 20px;
+			box-sizing: border-box;
+			padding: 10px 8px;
+			display: inline-block;
+			background-color: green;
+			color: white;
+			text-decoration: none;
+		}
+		a:link.a2,a:visited.a2{
+			display: inline-block;
+			width: 100px;
+			box-sizing: border-box;
+			text-align: center;
+			color: white;
+			background-color: #FF6766;
+			text-decoration: none;
+		}
+		a:hover.a2,a:active.a2{
+			display: inline-block;
+			width: 100px;
+			box-sizing: border-box;
+			text-align: center;
+			color: white;
+			background-color: #CF000F;
+			text-decoration: none;
+		}
+		ul.red{
+			width: 100px;
+			list-style-type: disc;
+			list-style-position: outside;
+			background-color: #FF6766;
+			margin: 20px;
+			padding: 20px;
+		}
+		li.red{
+			width: 100px;
+			background-color:#CF000F ;
+			color: white;
+			font-size: 15px;
+			letter-spacing: 1px;
+		}
+		ol{
+			list-style-type: upper-roman;
+			list-style-position: outside;
+		}
+		li.none{
+			 background-color: white;
+		}
+		ol.none{
+			width: 100px;
+			list-style-type: none;
+			margin: 0;
+			padding: 0;
+		}
+		table{
+			margin-left: 50px;
+			text-align: center;
+			width: 100%;
+		}
+		th{
+			font-family: Sofia,sans-serif;
+			text-align: center;
+			vertical-align: middle;
+			background-color: green;
+			color: white;
+			font-size: 20px;
+		}
+		td: {
+			padding: 10px;
+			text-align: center;
+			vertical-align: middle;
+		}
+		tr{
+			font-size:18px ;
+			border-bottom: 1px solid #ddd;
+
+		}
+		
+		tr:nth-child(odd){
+			background-color: #D2D7D3;
+		}
+		tr:hover{
+			background-color:coral ;
+		}
+		div ~ p{
+			color: red;
+		}
+		div p:first-child{
+			color: blue;
+		}
+		p::first-line{
+			color: coral;
+		}
+		p::first-letter{
+			font-size: xx-large;
+		}
+		::marker{
+			color: gold;
+		}
+		::selection{
+			background-color: lightskyblue;
+			color: red;
+		}
+    input[type="text"]:focus{
+       color: green;
+       border: none;
+       outline: none;
+       border-bottom: 2px solid coral;
+    }
+    input[type="text"]{
+       color: green;
+       border: none;
+       outline: none;
+       border-bottom: 2px solid coral;
+    }
+    label{
+       font-family: Sofia,sans-serif;
+       color: firebrick;
+    }
+    input[type="submit"]{
+       cursor: pointer;
+    }
+    textarea{
+       resize: none;
+       margin-left: 120px;
+       margin-top: -15px;
+    }
+    .box{
+    	float: left;
+    	width: 50%;
+    	padding: 50px;
+    }
+    .clearfix::after{
+    	content: "";
+    	clear: both;
+    	display: table;
+    }
+    h1::before{
+    	counter-increment: section;
+    	content: "Section " counter(section);
+    }
+    .calc{
+    	position: static;
+    	left: 50px;
+    	width: calc(100% - 100px);
+    	background-color: lightskyblue;
+    }
+    .transition{
+    	position: static;
+			background-color: red;
+			width: 200px;
+			height: 200px;
+			transition: width 1s, height 1s, transform 1s;
+			transition-delay: 1s;
+		}
+		.transition:hover{
+			width: 500px;
+			height: 500px;
+			transform: rotate(45deg);
+		}
+		@keyframes animation{
+			0% {background-color: red;left: 0px;top: 0px;}
+			25% {background-color: yellow ;left: 200px;top: 0px;}
+			50% {background-color: blue;left: 200px;top: 200px;}
+			75% {background-color: green;left: 0;top: 200px;}
+			100% {background-color: red;left: 0px;top: 200px;}
+		}
+		.animation{
+			position: relative;
+			background-color: red;
+			width: 200px;
+			height: 200px;
+			animation-name: animation;
+			animation-duration: 1s;
+			animation-delay: 1s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate-reverse;
+			animation-fill-mode: forwards;
+		}
+		.img{
+			max-width: 100%;
+			height: auto;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			border-radius: 70%;
+		}
+		.img:hover{
+			transform: scaleX(-1);
+		}
+
+		.imgthumbnail{
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+			border: 1px solid #ddd;
+			border-radius: 4px;
+			padding: 5px;
+		}
+		.imgthumbnail:hover{
+			box-shadow: 0 0 3px 2px rgba(0, 140, 186, 0.5);
+		}
+		.blur{
+			filter: blur(5px);
+		}
+		.brightness{
+			filter: brightness(250%);
+		}
+		.grayscale{
+			filter: grayscale(100%);
+		}
+		.contrast{
+			filter: contrast(100%);
+		}
+		.invert{
+			filter: invert(100%);
+		}
+		.opacity{
+			filter: opacity(50%);
+		}
+		.sepia{
+			filter: sepia(100%);
+		}
+		.shadow{
+			filter: drop-shadow(8px 8px 10px green);
+		}
+		.imgfadeinaboxcontainer{
+		 	position: relative;
+  		width: 300px;
+  		height: 300px;
+		}
+		.image{
+		  opacity: 1;
+		  display: block;
+		  width: 100%;
+		  height: auto;
+		  transition: .5s ease;
+		  backface-visibility: hidden;
+		}
+		.middle {
+		  transition: .5s ease;
+		  opacity: 0;
+		  position: absolute;
+		  top: 50%;
+		  left: 50%;
+		  transform: translate(-50%, -50%);
+		  -ms-transform: translate(-50%, -50%)
+		}
+		.text{
+			background-color: #4CAF50;
+		  color: white;
+		  font-size: 16px;
+		  padding: 16px 32px;
+		}
+		.imgfadeinaboxcontainer:hover .image {
+			opacity: 0.3;
+		}
+		.imgfadeinaboxcontainer:hover .middle{
+			opacity: 1;
+		}
+		.pagination{
+			display: inline-block;
+		}
+		.pagination a{
+			float: left;
+			color: black;
+			font-size: large;
+			padding: 15px;
+			text-decoration: none;
+		}
+		.pagination a:active{
+			background-color: green;
+			color: white;
+		}
+		.pagination a:hover:not(.active){
+			background-color: green;
+			color: white;
+		}
+		.columns{
+			column-count: 3;
+			column-gap: 20px;
+			column-rule: 1px solid var(--green);
+		}
+		.columnsspan{
+			column-span: all;
+		}
+		:root{
+			--green: rgb(0,100,0);
+		}
+		@media screen and (max-width: 992px){
+			body{
+				background-color: black;
+			}
+		}
+		@media screen and (min-width: 600px){
+			body{
+				background-color: black;
+			}
+		}
+		@media only screen and (orirentation: landscape){
+			body{
+				background-color: black;
+			}
+		}
+		.flex-container{
+			height: 200px;
+			display: flex;
+			flex-flow: row wrap;
+			background-color: black;
+			justify-content: center;
+			
+		}
+		.flex-container > div{
+			width: 300px;
+			margin: 10px;
+			background-color: white;
+			color: black;
+			font-size: xx-large;
+			text-align: center;
+			line-height: 75px;
+		}
+		.flexbox-container{
+			display: flex;
+			flex-flow: row wrap;
+			justify-content: space-around;
+			align-items: center;
+			background-color: lightskyblue;
+			height: 300px;
+		}
+		.flexbox-container-box1{
+			background-color: black;
+			border: 3px solid white;
+			padding: 5px;
+			width: 70%;
+			height: 100%;
+
+		}
+		.flexbox-container-box2{
+		background-color: black;
+		border: 3px solid white;
+		padding: 5px;
+		width: 30%;
+		height: 100%;
+		}
+		.item1{
+			grid-area: header;
+		}
+		.item2{
+			grid-area: menu;
+		}
+		.item3{
+			grid-area: main;
+		}
+		.item4{
+			grid-area: right;
+		}
+		.item5{
+			grid-area: footer;
+		}
+		.grid-container{
+			display:grid;
+			background-color: black;
+			grid-template-areas: 
+					'header header header header header'
+					'menu main main main right'
+					'menu main main main right'
+					'menu footer footer footer footer';
+			width: 100%;
+			height: 200px;
+			margin-top: 20px;
+		}
+		.grid-container > div{
+			text-align: center;
+			font-size: 30px;
+			border: 2px solid ghostwhite;
+		}
+	</style>
+	
+</head>
+
+<body>
+	<main>
+		<div class="divtitle font-effect-emboss" style="position: sticky;top: 0;">DEEPCODE</div>
+	</main>
+	<div>
+		<span class="spanquestion" style="margin-left: 100px; font-size: 50px;">Welcome to Deepcode</span><br><br><br>
+		<span class="spanquestion" style="margin-left: 150px;">Hey! I'm Deepcode <img src="computer.png" width="100px" height="100px"></span><br><br><br><br>
+		<span class="spanquestion" style="margin-left: 200px;">Would you like to chat with me?</span><br><br><br><br><br>
+		<span class="spanquestion" style="margin-left: 160px;">Can you ask me a question? <img src="question.png" width="100px" height="100px"></span><br><br><br>
+		<span class="spanquestion" style="margin-left: 100px;">Please type something...pls <img src="typing.png" width="100px" height="100px"></span><br><br><br><br>
+		<span class="spanquestion" style="margin-left: 100px;">Chat with me or die???? <img src="ghost.png" width="100px" height="100px"> </span><br><br><br>
+		 <span class="spanquestion" style="margin-left: 100px;">Scroll down for continuing... <img src="ghost.png" width="100px" height="100px"> </span><br><br><br>
+		<span class="spanquestion" style="margin-left: 100px;">Gru..I'm becoming ghost !!! <img src="ghost.png" width="100px" height="100px"> </span><br><br><br>
+		<span class="spanquestion" style="margin-left: 100px;">I'm a ghost now, I will haunt you until you die! <img src="ghost.png" width="100px" height="100px"> </span><br><br><br>
+	</div>
+	<div class="div1">
+		<div style="font-family: Chiller;text-align: center; font-weight: bold;text-transform: uppercase;font-size: 2em;color: whitesmoke;text-shadow: 2px 2px 2px red;">Hey, let's learn alphabet together</div><br>
+		<div class="divalphabet font-effect-fire">a b c d e f g h i j k l m n o p q r s t u v w x y z</div>
+	</div>
+	<i class="fas fa-cloud"></i>
+	<i class="glyphicon glyphicon-cloud"></i>
+	<i class="glyphicon glyphicon-remove"></i>
+	<i class="glyphicon glyphicon-user"></i>
+	<i class="material-icons">cloud</i>
+	<i class="material-icons">traffic</i>
+	<div>
+		<a class="a1" href="http://google.com">GOOGLE</a>
+		<a class="a2" href="http://facebook.com">FACEBOOK</a>
+		<span style="cursor:pointer;">hand</span>
+	</div>
+	<div>
+			<ul class="red">
+				<li class="red">Coffee</li>
+				<li class="red">Juice</li>
+				<li class="red">Milk tea</li>
+			</ul>
+			<ol>
+				<li>Coffee</li>
+				<li>Juice</li>
+				<li>Milk tea</li>
+			</ol>
+			<ol class="none">
+				<li class="none">Coffee</li>
+				<li class="none">Juice</li>
+				<li class="none">Milk tea</li>
+			</ol>
+	</div>
+	<div style="width: 500px;height: 200px; overflow-x: auto; overflow-y: auto;">
+		<table>
+			<th>Name</th>
+			<th>Score1</th>
+			<th>Score2</th>
+			<th>Score3</th>
+			<th>Score4</th>
+			<th>Score5</th>
+			<tr>
+				<td>Nam</td>
+				<td>100</td>
+				<td>100</td>
+				<td>100</td>
+				<td>100</td>
+				<td>100</td>
+			</tr>
+			<tr>
+				<td>Tien</td>
+				<td>90</td>
+				<td>90</td>
+				<td>90</td>
+				<td>90</td>
+				<td>90</td>
+			</tr>
+			<tr>
+				<td>Nga</td>
+				<td>80</td>
+				<td>80</td>
+				<td>80</td>
+				<td>80</td>
+				<td>80</td>
+			</tr>
+			<tr>
+				<td>Hao</td>
+				<td>70</td>
+				<td>70</td>
+				<td>70</td>
+				<td>70</td>
+				<td>70</td>
+			</tr>
+			<tr>
+				<td>Van</td>
+				<td>60</td>
+				<td>60</td>
+				<td>60</td>
+				<td>60</td>
+				<td>60</td>
+			</tr>
+			<tr>
+				<td>Thoa</td>
+				<td>50</td>
+				<td>50</td>
+				<td>50</td>
+				<td>50</td>
+				<td>50</td>
+			</tr>
+			<tr>
+				<td>Dai</td>
+				<td>40</td>
+				<td>40</td>
+				<td>40</td>
+				<td>40</td>
+				<td>40</td>
+			</tr>
+		</table>
+	</div>
+	<div style="border:1px solid red;margin-left: 20px;width: 200px;display: inline-block;height: 50px; overflow: auto;">
+		<p style="display: none;">sdkfhsdf</p>
+		<p style="display: inline;">sdkfhsdf</p>
+		<p style="display: inline;">sdkfhsdf</p>
+		<p>sdkfhsdf</p>
+		<p>sdkfhsdf</p>
+	</div>
+	<div style="border:1px solid red;margin-left: 20px;width: 200px;display: inline-block;height: 50px;">
+		<p style="visibility: hidden;">sdkfhsdf</p>
+		<p>sdkfhsdfdfsdfsd</p>
+	</div>
+	<div style="border:1px solid red;width: 200px;height:200px;margin-left: 10px; margin-bottom: 10px;">
+		<p style="display:inline;"><img src="ghost.png" alt="thinh" width="100px" height="100px" style="float: right;display: inline;">kdfhskjdhflsdjhfklsjdhfsdd</p>
+	</div>
+	<div style="border:3px solid green;margin-left:20px;margin-bottom: 20px;width: 200px;height: 200px;float:left;">	
+	</div>
+	<div style="border:3px solid blue;margin-left:20px;margin-bottom: 20px;width: 200px;height: 200px;float: left;">
+	</div>
+	<div>
+		<section>
+			sdfsdf
+			<p>Thinh</p>
+		</section>
+	</div>
+	<p>Thinh</p>
+	<p>Thinh</p>
+	<div></div>
+	<p>Thinh</p>
+	<figure>
+		<img src="ghost.png" style="width: 100px;height: 100px;">
+		<figcaption>Pic 1</figcaption>
+	</figure><br>
+	<div style="width:400px;margin-left: 20px;">
+		<form method="get" id="form1">
+   		<fieldset>
+	      <legend>Personal Information</legend>
+	      <label for="name">Full Name</label>
+	      <input type="text" name="name" maxlength="80" size=20 required>
+	      <input type="hidden" name="hidden" value="1101">
+	      <button onclick="alert('Hello')">Test</button><br><br>
+	      <label for="birthday">Birthday</label>
+	      <input type="date" name="birthday" min="1900-01-01" style="cursor: pointer;"><br><br>
+	      <label for="gender">Gender</label>
+	      <select name="gender" style="cursor: pointer;">
+	         <option value="men">Men</option>
+	         <option value="women">Women</option>
+	      </select><br><br>
+	      <label for="mail">E-mail</label>
+	      <input type="E-mail" name="mail" autocomplete="on" maxlength="80" size=20 required><br><br>
+	      <label for="password">Password</label>
+	      <input type="password" name="password" size=20 required maxlength="80"><br><br>
+	      <label for="tel">Tel</label>
+	      <input type="tel" name="tel" placeholder="123-456-789" size=20 required maxlength="80" pattern="[0-9]{3}-[0-9]{3}-[0-9]{3}"><br><br>
+	      <label for="color">Team color</label>
+	      <input type="color" name="color" style="cursor: pointer;"><br><br>
+	      <label>Job title:&nbsp</label>
+	      <input type="radio" name="job" value="student">
+	      <label for="student">Student</label>
+	      <input type="radio" name="job" value="worker">
+	      <label for="worker">Worker</label>
+	      <input type="radio" name="job" value="owner">
+	      <label for="owner">Company owner</label><br><br>
+	      <label for="salary">Range of salary:&nbsp</label>
+	      <input type="Range" name="salary" min="0" max="10000000" value="0" style="cursor:pointer;"><br><br>
+	      <label for="url">Website</label>
+	      <input type="url" name="url">
+	      <label for="file">CV File</label>
+	      <input type="file" name="file" multiple style="cursor: pointer;"><br><br>
+	      <fieldset>
+	         <legend>Course</legend>
+	         <input type="checkbox" name="html" value="html">
+	         <label for="html">HTML</label>
+	         <input type="checkbox" name="css" value="css">
+	         <label for="css">CSS</label>
+	         <input type="checkbox" name="javascript" value="javascript">
+	         <label for="javascript">Javascript</label>
+	      </fieldset><br>
+      	<label>Your comments: &nbsp</label><br>
+	      <textarea rows="5" cols="50"></textarea><br><br>
+	      <input type="submit" name="submit" value="Submit"><br><br>
+   		</fieldset>
+		</form>
+		<label for="anotherform">Another form</label>
+		<input type="text" name="anotherform" form="form1">
+		<input type="text" name="anotherform"><br><br>
+		<iframe src="https://www.youtube.com/embed/TfkuSMutqIQ" width="400" height="300">
+		</iframe>
+		<video width="400" height="300" controls>
+		   <source src="video1.mp4" type="video/mp4">
+		</video>
+		<audio controls autoplay>
+		   <source src="audio1.mp3" type="audio/mp3">
+		</audio>
+
+	</div>
+	<div class="clearfix" style="width:500px">
+		<div class="box" style="background-color: black;color: white; text-align: center;">Box black</div>
+		<div class="box" style="background-color: white;color: black;text-align: center;">Box white</div>
+	</div>
+	<div class="calc">
+			<h1></h1>
+			<h1></h1>
+	</div>
+	<div class="transition"></div>
+	<div class="animation"></div>
+	<img class="img" src="ghost.png" alt="thinh" width="150px" height="150px">
+	<img class="blur" src="ghost.png" alt="thinh" width="150px" height="150px">
+	<img class="brightness" src="ghost.png" alt="thinh" width="150px" height="150px">
+	<img class="grayscale" src="ghost.png" alt="thinh" width="150px" height="150px">
+	<img class="contrast" src="ghost.png" alt="thinh" width="150px" height="150px">
+	<img class="invert" src="ghost.png" alt="thinh" width="150px" height="150px">
+	<img class="opacity" src="ghost.png" alt="thinh" width="150px" height="150px">
+	<img class="sepia" src="ghost.png" alt="thinh" width="150px" height="150px">
+	<img class="shadow" src="ghost.png" alt="thinh" width="150px" height="150px">
+
+	<a href="ghost.png"><img class="imgthumbnail" src="ghost.png" alt="thinh" width="150px" height="150px"></a>
+	<div class="imgfadeinaboxcontainer">
+		<img class="image" src="ghost.png" width="100px" height="100px" alt="thinh" >
+		<div class="middle">
+				<div class="text">Ghost</div>
+		</div>
+	</div>
+	<div style="width:100%;height:150px;">
+		<img style="-webkit-box-reflect: right 10px linear-gradient(to right,rgba(0,0,0,0),rgba(0,0,0,0.6));width: 150px;height: 100%;" src="ghost.png" alt="thinh">
+	</div>
+	<div style="width:100%;height:150px;">
+		<img src="ghost.png" style="float:left;width: 50%;height: 100%;object-fit: contain;object-position: 10% 100%;" alt="thinh">
+		<img src="ghost.png" style="float:left;width: 50%;height: 100%;object-fit: scale-down;object-position: 100% 10%;" alt="thinh">
+	</div>
+	<div style="width:10%;height:200px;-webkit-mask-image: linear-gradient(black,transparent);overflow-y: auto;background: url('ghost.png') no-repeat center;background-origin: content-box;background-size: contain;">
+		<p>ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
+			ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
+			ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
+			ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
+				ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
+					ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
+						ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
+							ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
+				ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
+					ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
+						ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
+				ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
+					ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
+		</p>
+	</div>
+	<div class="pagination">
+		<a href="#"><<</a>
+		<a href="#">1</a>
+		<a href="#">2</a>
+		<a href="#">3</a>
+		<a href="#">4</a>
+		<a href="#">5</a>
+		<a href="#">>></a>
+	</div>
+	<div class="columns" style="width: 50%;height: 200px;resize: vertical;overflow: auto;resize: none;">
+		<h2 class="columnsspan">Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet</h2>
+		Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+	</div>
+	<div class="flex-container">
+		<div style="order:3;flex:0 0 400px;align-self: center;">Box 1</div>
+		<div style="order:2">Box 2</div>
+		<div style="order:1">Box 3</div>
+	</div>
+	<div class="flexbox-container">
+		<div class="flexbox-container-box1" style="order: 2; column-count: 3;column-gap: 15px;column-rule: 3px solid green;">
+			<h1 style="column-span: all;text-align: center;">Lorem ipsum dolor sit amet, consectetuer adipiscing elit</h1>
+		Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+	</div>
+		<div class="flexbox-container-box2" style="order:1;">Box 2</div>
+	</div>
+	<div style="display: grid;grid-column-gap: 10px;grid-template-columns: auto auto auto auto;background-color: black;width: 100%;height: 200px;">
+		<div style="border:2px solid blue;text-align: center;grid-column: 1/3;">Box1</div>
+		<div style="border:2px solid blue;text-align: center;">Box2</div>
+		<div style="border:2px solid blue;text-align: center;">Box3</div>
+		<div style="border:2px solid blue;text-align: center;grid-row: 2/span 2;">Box4</div>
+		<div style="border:2px solid blue;text-align: center;">Box5</div>
+		<div style="border:2px solid blue;text-align: center;">Box6</div>
+		<div style="border:2px solid blue;text-align: center;">Box7</div>
+		<div style="border:2px solid blue;text-align: center;">Box8</div>
+		<div style="border:2px solid blue;text-align: center;">Box9</div>
+	</div>
+	<div class="grid-container">
+		<div class="item1">Header</div>
+		<div class="item2">Menu</div>
+		<div class="item3">Main</div>
+		<div class="item4">Right</div>
+		<div class="item5">Footer</div>
+	</div>
+</body>
+
+</html> 
