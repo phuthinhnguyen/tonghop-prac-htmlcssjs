@@ -11,6 +11,9 @@
 	<base target="_blank">
 	<link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="icon" type="text/css" href="ghost.png">
+	<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Roboto:ital,wght@0,300;0,400;1,300;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<style>
 		body {
 			background: #ffffff url(back.jpg) no-repeat center;
@@ -19,6 +22,9 @@
 		}
 		*{
 			box-sizing: border-box;
+		}
+		.font1{
+			font-family: "Jost";
 		}
 		.spanquestion {
 			border-left: 10px solid red;
@@ -157,7 +163,7 @@
 			color: white;
 			font-size: 20px;
 		}
-		td: {
+		td {
 			padding: 10px;
 			text-align: center;
 			vertical-align: middle;
@@ -466,6 +472,94 @@
 			font-size: 30px;
 			border: 2px solid ghostwhite;
 		}
+		.section-collection-head{
+			position: relative;
+			display: flex;
+			align-items: center;
+			max-width: 1640px;
+			margin: auto;
+			padding: 50px 20px;
+			color: white;
+		} 
+		.section-collection-head span{
+			float: left;
+			font-size: 40px;
+		}
+		.arrow{
+		position: absolute;
+		right: 0;
+		}
+		.arrow a{
+		margin-right: 20px;
+		}
+		.section-collection-content .zoom{
+		transition: transform 0.3s ease-in-out;
+		}
+		/* .section-collection-content .zoom img{
+		transition: transform 0.3s ease-in-out;
+		} */
+		.section-collection-content .zoom:hover {
+		transform: scale(1.06);
+		cursor: pointer;
+		}
+		/* .section-collection-content .zoom:hover img{
+		transform: scale(1.1);
+		}  */
+
+		.section-collection-content{
+		display: flex;
+		grid-gap: 30px;
+		max-width: 1780px;
+		height: 650px;
+		width: 100%;
+		float: right;
+		padding-left: 20px;
+		overflow-x: auto;
+		scroll-snap-type: x;
+		scroll-behavior: smooth;
+		scrollbar-width: none; /* for firefox */
+		}
+
+		.section-collection-content::-webkit-scrollbar{ /* for chrome */
+		display: none;
+		}
+		.section-collection-content .item{
+		background-image: url("cat_01.jpg");
+		background-position: center;
+		background-repeat: no-repeat;
+		min-width: calc(25% - 30px);
+		display: flex;
+		user-select: none;
+		}
+		.section-collection-content .item .content{
+		margin-top: 450px;
+		margin-left: 20px;
+		width: 100%;
+		display: flex;
+		align-items: center;
+		}
+		.section-collection-content  .item .content .text{
+		width: 50%;
+		}
+		.content .text h2{
+		font-weight: 400;
+		}
+		.content .text p{
+		color: grey;
+		}
+		.section-collection-content .item .content a{
+		display: inline-block;
+		padding: 15px;
+		background-color: white;
+		border-radius: 50%;
+		text-align: right;
+		margin-right: 20px;
+		margin-left: 150px;
+		}
+		.section-collection-content .item .content a:hover{
+		background-color: black;
+		color: white;
+		}
 	</style>
 	
 </head>
@@ -771,6 +865,136 @@
 		<div class="item4">Right</div>
 		<div class="item5">Footer</div>
 	</div>
+	<div class="section-collection-head font1">
+        <span>Section Collection</span>
+        <div class="arrow">
+            <a><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+            <a><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+        </div>
+    </div>
+    <div class="section-collection-content font1">
+        <div class="item zoom">
+            <div class="content">
+                <div class="text">
+                    <h2>Sneakers</h2>
+                    <p>8 items</p>
+                </div>
+                <a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="item zoom">
+            <div class="content">
+                <div class="text">
+                    <h2>Leather Bag</h2>
+                    <p>5 items</p>
+                </div>
+                <a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="item zoom">
+            <div class="content">
+                <div class="text">
+                    <h2>Shoes</h2>
+                    <p>10 items</p>
+                </div>
+                <a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="item zoom">
+            <div class="content">
+                <div class="text">
+                    <h2>Blazers</h2>
+                    <p>8 items</p>
+                </div>
+                <a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="item zoom">
+            <div class="content">
+                <div class="text">
+                    <h2>Tops</h2>
+                    <p>9 items</p>
+                </div>
+                <a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="item zoom">
+            <div class="content">
+                <div class="text">
+                    <h2>Glasses</h2>
+                    <p>6 items</p>
+                </div>
+                <a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="item zoom">
+            <div class="content">
+                <div class="text">
+                    <h2>Sandals</h2>
+                    <p>11 items</p>
+                </div>
+                <a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="item zoom">
+            <div class="content">
+                <div class="text">
+                    <h2>Basic</h2>
+                    <p>10 items</p>
+                </div>
+                <a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+        </div>
+    </div> 
+	<script>
+        let wrapper = document.querySelector(".section-collection-content");
+        let pressed = false;
+        let startX = 0;
+        wrapper.addEventListener("mousedown",function (e) {
+            pressed=true;
+            startX=e.clientX;
+            console.log(e.clientX)
+        })
+        wrapper.addEventListener("mouseleave",function (e) {
+            pressed=false;
+        })
+        window.addEventListener("mouseup",function (e) {
+            pressed=false;
+        })
+        wrapper.addEventListener("mousemove",function (e) {
+           if (!pressed){
+            return
+           }
+           this.scrollLeft += (startX - e.clientX)*2;
+            $(".arrow").children("a").css({"color":"white"});
+        })
+        $(".arrow").children("a").hover(function name(params) {
+            $(this).css({"cursor":"pointer"})
+        })
+        $(".arrow").children("a").last().click(function name(params) {
+            wrapper.scrollLeft+=2050;
+            $(this).css({"color":"gray"});
+            $(".arrow").children("a").first().css({"color":"white"});
+        })
+        $(".arrow").children("a").first().click(function name(params) {
+            wrapper.scrollLeft-=2050;
+            $(this).css({"color":"gray"});
+            $(".arrow").children("a").last().css({"color":"white"});
+        })
+        if (wrapper.scrollLeft==0){
+            $(".arrow").children("a").first().css({"color":"gray"})
+        }
+        let bg = document.getElementsByClassName("zoom");
+        bg[0].style.backgroundImage = "url('cat_01.jpg')";
+        bg[1].style.backgroundImage = "url('cat_02.jpg')";
+        bg[2].style.backgroundImage = "url('cat_03.jpg')";
+        bg[3].style.backgroundImage = "url('cat_04.jpg')";
+        bg[4].style.backgroundImage = "url('cat_05.jpg')";
+        bg[5].style.backgroundImage = "url('cat_06.jpg')";
+        bg[6].style.backgroundImage = "url('cat_07.jpg')";
+        bg[7].style.backgroundImage = "url('cat_08.jpg')";
+        
+    </script> 
 </body>
 
 </html> 
