@@ -774,97 +774,115 @@
 			margin-top: 20px;
 		}
 		.store-content{
-  margin: auto;
-  max-width: 1200px;
-  padding: 20px;
-  height: 750px;
-  margin-top: 50px;
-  margin-bottom:150px;
-}
-.store-content .store-wrap{
-  width: 100%;
-  text-align: center;
-}
-.store-content .store-wrap .item1{
-  float: left;
-  width: 40%;
-}
-.item1 .item1-head{
-  margin-bottom: 20px;
-  height: 50px;
-}
-.store-content .store-wrap .item1 .item1-head input{
-  width: 74%;
-  height: 45px;
-  float: left;
-  border-radius: 5px;
-  padding-left: 20px;
-  border: 1px solid rgb(194, 193, 193);
-}
-.store-content .store-wrap .item1 .item1-head button{
-  width: 24%;
-  float: right;
-  height: 45px;
-  background-color: black;
-  color: white;
-  border-radius: 5px;
-  transition: transform 0.3s;
-}
-.store-content .store-wrap .item1 .item1-head button:hover{
-  cursor: pointer;
-  transform: scale(1.05);
-}
-.item1-content{
-  height: 680px;
-  overflow-y: scroll;
-  clear: both;
-}
-.item1-content-item-img{
-  width: 100%;
-  text-align: left;
-  margin-top: 20px;
-}
-.item1-content-item-img-left{
-  float: left;
-  width: 30%;
-}
-.item1-content-item-img-left img{
-	width: 100%;
-	height: auto;
-}
-.item1-content-item-img-right{
-  float: left;
-  width: 70%;
-  padding: 10px 20px 10px;
-}
-.item1-content-item-img-right h2{
-  font-size: 18px;
-  font-weight: 450;
-  margin: 0;
-}
-.item1-content-item-img-right p{
-  font-size: 14px;
-  color: grey;
-}
-.item1-content-item-img-right a{
-  text-decoration: underline;
-}
-.item1-content-item-time{
-  clear: both;
-  background-color: rgb(241, 238, 238);
-  text-align: left;
-  padding: 10px 15px 10px;
-}
-.store-content .store-wrap .item2{
-  float: right;
-  width: 58%;
-  color: black;
-  height: 750px;
-  text-align: left;
-}
-.store-content .store-wrap .item2 h1{
-  text-align: center;
-}
+			margin: auto;
+			max-width: 1200px;
+			padding: 20px;
+			height: 750px;
+			margin-top: 50px;
+			margin-bottom:150px;
+		}
+		.store-content .store-wrap{
+			width: 100%;
+			text-align: center;
+		}
+		.store-content .store-wrap .item1{
+			float: left;
+			width: 40%;
+		}
+		.item1 .item1-head{
+			margin-bottom: 20px;
+			height: 50px;
+		}
+		.store-content .store-wrap .item1 .item1-head input{
+			width: 74%;
+			height: 45px;
+			float: left;
+			border-radius: 5px;
+			padding-left: 20px;
+			border: 1px solid rgb(194, 193, 193);
+		}
+		.store-content .store-wrap .item1 .item1-head button{
+			width: 24%;
+			float: right;
+			height: 45px;
+			background-color: black;
+			color: white;
+			border-radius: 5px;
+			transition: transform 0.3s;
+		}
+		.store-content .store-wrap .item1 .item1-head button:hover{
+			cursor: pointer;
+			transform: scale(1.05);
+		}
+		.item1-content{
+			height: 680px;
+			overflow-y: scroll;
+			clear: both;
+		}
+		.item1-content-item-img{
+			width: 100%;
+			text-align: left;
+			margin-top: 20px;
+		}
+		.item1-content-item-img-left{
+			float: left;
+			width: 30%;
+		}
+		.item1-content-item-img-left img{
+			width: 100%;
+			height: auto;
+		}
+		.item1-content-item-img-right{
+			float: left;
+			width: 70%;
+			padding: 10px 20px 10px;
+		}
+		.item1-content-item-img-right h2{
+			font-size: 18px;
+			font-weight: 450;
+			margin: 0;
+		}
+		.item1-content-item-img-right p{
+			font-size: 14px;
+			color: grey;
+		}
+		.item1-content-item-img-right a{
+			text-decoration: underline;
+		}
+		.item1-content-item-time{
+			clear: both;
+			background-color: rgb(241, 238, 238);
+			text-align: left;
+			padding: 10px 15px 10px;
+		}
+		.store-content .store-wrap .item2{
+			float: right;
+			width: 58%;
+			color: black;
+			height: 750px;
+			text-align: left;
+		}
+		.store-content .store-wrap .item2 h1{
+			text-align: center;
+		}
+		#scrolltop:hover{
+			cursor: pointer;
+		}
+		#scrolltop img{
+			height: auto;
+			width: 100%;
+		}
+		.scrolltop-show{
+			position: fixed;
+			bottom: 100px;
+			right: 30px;
+			width: 60px;
+			height: 60px;
+			animation: navsticky 0.8s;
+			transition: transform 0.4s;
+			background-color: white;
+			padding: 5px;
+		}
 	</style>
 	
 </head>
@@ -1571,6 +1589,23 @@
                 $(this).toggle($(this).text().toLocaleLowerCase().indexOf(gettext)>-1);
             })
         })
+    </script>
+	<div id="scrolltop">
+        <img src="totop.png" alt="">
+    </div>
+    <script>
+        $("#scrolltop").click(function name(params) {
+            $("html").animate({scrollTop:0},"slow");
+        })
+        window.onscroll=function(){scrolltop()};
+        function scrolltop(){
+            if ((document.body.scrollTop>100) || (document.documentElement.scrollTop>100)){
+            $("#scrolltop").addClass("scrolltop-show");
+            }
+            else {
+                $("#scrolltop").removeClass("scrolltop-show");
+            };
+        }
     </script>
 </body>
 
