@@ -883,6 +883,46 @@
 			background-color: white;
 			padding: 5px;
 		}
+		.faq-content-foot{
+			max-width: 1200px;
+			margin: auto;
+			padding: 20px;
+		}
+		.faq-content-foot-item{
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			cursor: pointer;
+			border-bottom: 1px solid lightgray;
+		}
+		.faq-content-foot-item h3{
+			font-weight: 500;
+		}
+		.faq-content-foot-item a:last-of-type{
+			display: none;
+		}
+		.faq-content-foot-item a:hover{
+			color: gray;
+		}
+		.faq-content-foot-item-dropdown{
+			width: 100%;
+			display: none;
+		}
+		.faq-content-foot-item-dropdown p{
+			color: gray;
+			line-height: 30px;
+			margin-left: 0;
+			text-align: left;
+		}
+		.faq-content-foot-item-dropdown ul{
+			text-align: left;
+			line-height: 30px;
+			color: gray;
+			list-style-type: circle;
+			margin-left: 20px;
+			padding: 0;
+		
+		}
 	</style>
 	
 </head>
@@ -1607,6 +1647,123 @@
             };
         }
     </script>
+	 <div class="faq-content-foot">
+		<div class="faq-content-foot-item eq1">
+			<h3>Available Payment</h3>
+			<a id="plus"><i class="fa-sharp fa-solid fa-plus"></i></a>
+			<a id="minus"><i class="fa fa-minus"></i></a>
+		</div>
+		<div class="faq-content-foot-item-dropdown eq1-dropdown">
+			<p>So beautiful you’ll want to show it off, so comfortable you’ll forget it’s there. Our 24/7™ Lace Contour Plunge Bra combines gorgeous floral lace with sheer overlay straps that hold you in and eliminates gaping. Removable pads let you customize you</p>
+			<ul>
+				<li>Cropped pink crepe knit top</li>
+				<li>Square neckline</li>
+				<li>Embroidered Aje logo</li>
+				<li>Cross back straps</li>
+			</ul>
+		</div>
+		<div class="faq-content-foot-item eq2">
+			<h3>Order History and Disputes</h3>
+			<a id="plus"><i class="fa-sharp fa-solid fa-plus"></i></a>
+			<a id="minus"><i class="fa fa-minus"></i></a>
+		</div>
+		<div class="faq-content-foot-item-dropdown eq2-dropdown">
+			<p>So beautiful you’ll want to show it off, so comfortable you’ll forget it’s there. Our 24/7™ Lace Contour Plunge Bra combines gorgeous floral lace with sheer overlay straps that hold you in and eliminates gaping. Removable pads let you customize you</p>
+			<ul>
+				<li>Cropped pink crepe knit top</li>
+				<li>Square neckline</li>
+				<li>Embroidered Aje logo</li>
+				<li>Cross back straps</li>
+			</ul>
+		</div>
+		<div class="faq-content-foot-item eq3">
+			<h3>Shipping and Handling</h3>
+			<a id="plus"><i class="fa-sharp fa-solid fa-plus"></i></a>
+			<a id="minus"><i class="fa fa-minus"></i></a>
+		</div>
+		<div class="faq-content-foot-item-dropdown eq3-dropdown">
+			<p>So beautiful you’ll want to show it off, so comfortable you’ll forget it’s there. Our 24/7™ Lace Contour Plunge Bra combines gorgeous floral lace with sheer overlay straps that hold you in and eliminates gaping. Removable pads let you customize you</p>
+			<ul>
+				<li>Cropped pink crepe knit top</li>
+				<li>Square neckline</li>
+				<li>Embroidered Aje logo</li>
+				<li>Cross back straps</li>
+			</ul>
+		</div>
+		<div class="faq-content-foot-item eq4">
+			<h3>Gift Cards</h3>
+			<a id="plus"><i class="fa-sharp fa-solid fa-plus"></i></a>
+			<a id="minus"><i class="fa fa-minus"></i></a>
+		</div>
+		<div class="faq-content-foot-item-dropdown eq4-dropdown">
+			<p>So beautiful you’ll want to show it off, so comfortable you’ll forget it’s there. Our 24/7™ Lace Contour Plunge Bra combines gorgeous floral lace with sheer overlay straps that hold you in and eliminates gaping. Removable pads let you customize you</p>
+			<ul>
+				<li>Cropped pink crepe knit top</li>
+				<li>Square neckline</li>
+				<li>Embroidered Aje logo</li>
+				<li>Cross back straps</li>
+			</ul>
+		</div>
+		<div class="faq-content-foot-item eq5">
+			<h3>Return and Exchanges</h3>
+			<a id="plus"><i class="fa-sharp fa-solid fa-plus"></i></a>
+			<a id="minus"><i class="fa fa-minus"></i></a>
+		</div>
+		<div class="faq-content-foot-item-dropdown eq5-dropdown">
+			<p>So beautiful you’ll want to show it off, so comfortable you’ll forget it’s there. Our 24/7™ Lace Contour Plunge Bra combines gorgeous floral lace with sheer overlay straps that hold you in and eliminates gaping. Removable pads let you customize you</p>
+			<ul>
+				<li>Cropped pink crepe knit top</li>
+				<li>Square neckline</li>
+				<li>Embroidered Aje logo</li>
+				<li>Cross back straps</li>
+			</ul>
+		</div>
+	</div>
+	<script>
+         let faqindexeq1=0;
+        let faqindexeq2=0;
+        let faqindexeq3=0;
+        let faqindexeq4=0;
+        let faqindexeq5=0;
+        function faqdropdown(selector,faqindex){
+            if (faqindex%2!=0){
+                $(selector).css({"border-bottom":"1px solid black"});
+                $(selector).children("#plus").css({"display":"none"});
+                $(selector).children("#minus").css({"display":"block"});
+            }
+            else{
+                $(selector).css({"border-bottom":"1px solid lightgray"});
+                $(selector).children("#plus").css({"display":"block"});
+                $(selector).children("#minus").css({"display":"none"});
+        }
+        }
+
+        $(".eq1").bind("click",function name(params) {
+            $(".eq1-dropdown").slideToggle();
+            faqindexeq1++;
+            faqdropdown(this,faqindexeq1);
+        })
+        $(".eq2").bind("click",function name(params) {
+            $(".eq2-dropdown").slideToggle();
+            faqindexeq2++;
+            faqdropdown(this,faqindexeq2);
+        })
+        $(".eq3").bind("click",function name(params) {
+            $(".eq3-dropdown").slideToggle();
+            faqindexeq3++;
+            faqdropdown(this,faqindexeq3);
+        })
+        $(".eq4").bind("click",function name(params) {
+            $(".eq4-dropdown").slideToggle();
+            faqindexeq4++;
+            faqdropdown(this,faqindexeq4);
+        })
+        $(".eq5").bind("click",function name(params) {
+            $(".eq5-dropdown").slideToggle();
+            faqindexeq5++;
+            faqdropdown(this,faqindexeq5);
+        })
+    </script>   
 </body>
 
 </html> 
