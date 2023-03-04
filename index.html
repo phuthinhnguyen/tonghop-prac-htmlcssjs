@@ -14,239 +14,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
-	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-	<style>
-
-		
-		
-	
-	
-		
-		.section-collection-head{
-			position: relative;
-			display: flex;
-			align-items: center;
-			max-width: 1640px;
-			margin: auto;
-			padding: 50px 20px;
-			color: white;
-		} 
-		.section-collection-head span{
-			float: left;
-			font-size: 40px;
-		}
-		.arrow{
-			position: absolute;
-			right: 0;
-		}
-		.arrow a{
-			margin-right: 20px;
-		}
-		.section-collection-content .zoom{
-			transition: transform 0.3s ease-in-out;
-		}
-		/* .section-collection-content .zoom img{
-		transition: transform 0.3s ease-in-out;
-		} */
-		.section-collection-content .zoom:hover {
-			transform: scale(1.06);
-			cursor: pointer;
-		}
-		/* .section-collection-content .zoom:hover img{
-		transform: scale(1.1);
-		}  */
-
-		.section-collection-content{
-			display: flex;
-			grid-gap: 30px;
-			max-width: 1780px;
-			height: 650px;
-			width: 100%;
-			float: right;
-			padding-left: 20px;
-			overflow-x: auto;
-			scroll-snap-type: x;
-			scroll-behavior: smooth;
-			scrollbar-width: none; /* for firefox */
-		}
-
-		.section-collection-content::-webkit-scrollbar{ /* for chrome */
-			display: none;
-		}
-		.section-collection-content .item{
-			background-image: url("assets/images/cat_01.jpg");
-			background-position: center;
-			background-repeat: no-repeat;
-			min-width: calc(25% - 30px);
-			display: flex;
-			user-select: none;
-		}
-		.section-collection-content .item .content{
-			margin-top: 450px;
-			margin-left: 20px;
-			width: 100%;
-			display: flex;
-			align-items: center;
-		}
-		.section-collection-content  .item .content .text{
-			width: 50%;
-		}
-		.content .text h2{
-			font-weight: 400;
-		}
-		.content .text p{
-			color: grey;
-		}
-		.section-collection-content .item .content a{
-			display: inline-block;
-			padding: 15px;
-			background-color: white;
-			border-radius: 50%;
-			text-align: right;
-			margin-right: 20px;
-			margin-left: 150px;
-		}
-		.section-collection-content .item .content a:hover{
-			background-color: black;
-			color: white;
-		}
-		
-		
-		.store-content{
-			margin: auto;
-			max-width: 1200px;
-			padding: 20px;
-			height: 750px;
-			margin-top: 50px;
-			margin-bottom:150px;
-		}
-		.store-content .store-wrap{
-			width: 100%;
-			text-align: center;
-		}
-		.store-content .store-wrap .item1{
-			float: left;
-			width: 40%;
-		}
-		.item1 .item1-head{
-			margin-bottom: 20px;
-			height: 50px;
-		}
-		.store-content .store-wrap .item1 .item1-head input{
-			width: 74%;
-			height: 45px;
-			float: left;
-			border-radius: 5px;
-			padding-left: 20px;
-			border: 1px solid rgb(194, 193, 193);
-		}
-		.store-content .store-wrap .item1 .item1-head button{
-			width: 24%;
-			float: right;
-			height: 45px;
-			background-color: black;
-			color: white;
-			border-radius: 5px;
-			transition: transform 0.3s;
-		}
-		.store-content .store-wrap .item1 .item1-head button:hover{
-			cursor: pointer;
-			transform: scale(1.05);
-		}
-		.item1-content{
-			height: 680px;
-			overflow-y: scroll;
-			clear: both;
-		}
-		.item1-content-item-img{
-			width: 100%;
-			text-align: left;
-			margin-top: 20px;
-		}
-		.item1-content-item-img-left{
-			float: left;
-			width: 30%;
-		}
-		.item1-content-item-img-left img{
-			width: 100%;
-			height: auto;
-		}
-		.item1-content-item-img-right{
-			float: left;
-			width: 70%;
-			padding: 10px 20px 10px;
-		}
-		.item1-content-item-img-right h2{
-			font-size: 18px;
-			font-weight: 450;
-			margin: 0;
-		}
-		.item1-content-item-img-right p{
-			font-size: 14px;
-			color: grey;
-		}
-		.item1-content-item-img-right a{
-			text-decoration: underline;
-		}
-		.item1-content-item-time{
-			clear: both;
-			background-color: rgb(241, 238, 238);
-			text-align: left;
-			padding: 10px 15px 10px;
-		}
-		.store-content .store-wrap .item2{
-			float: right;
-			width: 58%;
-			color: black;
-			height: 750px;
-			text-align: left;
-		}
-		.store-content .store-wrap .item2 h1{
-			text-align: center;
-		}
-	
-		.faq-content-foot{
-			max-width: 1200px;
-			margin: auto;
-			padding: 20px;
-		}
-		.faq-content-foot-item{
-			display: flex;
-			justify-content: space-between;
-			align-items: center;
-			cursor: pointer;
-			border-bottom: 1px solid lightgray;
-		}
-		.faq-content-foot-item h3{
-			font-weight: 500;
-		}
-		.faq-content-foot-item a:last-of-type{
-			display: none;
-		}
-		.faq-content-foot-item a:hover{
-			color: gray;
-		}
-		.faq-content-foot-item-dropdown{
-			width: 100%;
-			display: none;
-		}
-		.faq-content-foot-item-dropdown p{
-			color: gray;
-			line-height: 30px;
-			margin-left: 0;
-			text-align: left;
-		}
-		.faq-content-foot-item-dropdown ul{
-			text-align: left;
-			line-height: 30px;
-			color: gray;
-			list-style-type: circle;
-			margin-left: 20px;
-			padding: 0;
-		
-		}
-	</style>
-	
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>	
 </head>
 
 <body>
@@ -285,7 +53,7 @@
 	</main>
 
 	<!-- spanquestion -->
-	<div>
+	<div class="spanquestion-container">
 		<span class="spanquestion" style="margin-left: 100px; font-size: 50px;">Welcome to Deepcode</span><br><br><br>
 		<span class="spanquestion" style="margin-left: 150px;">Hey! I'm Deepcode <img src="assets/images/computer.png" width="100px" height="100px"></span><br><br><br><br>
 		<span class="spanquestion" style="margin-left: 200px;">Would you like to chat with me?</span><br><br><br><br><br>
@@ -484,7 +252,7 @@
 
 	<!-- audio -->
 	<audio controls autoplay>
-	   <source src="dassets/audios/audio1.mp3" type="audio/mp3">
+	   <source src="assets/audios/audio1.mp3" type="audio/mp3">
 	</audio>
 
 	<!-- clearfix -->
@@ -500,10 +268,16 @@
 	</div>
 
 	<!-- transition -->
-	<div class="transition"></div>
+	<div class="transition-container">
+		<div class="transition"></div>
+	</div>
+
 
 	<!-- animation -->
-	<div class="animation"></div>
+	<div class="animation-container">
+		<div class="animation"></div>
+	</div>
+	
 
 	<!-- filter -->
 	<div class="filter">
@@ -519,38 +293,49 @@
 	</div>
 	
 	<!-- imgthumbnail -->
-	<a href="assets/images/ghost.png"><img class="imgthumbnail" src="assets/images/ghost.png" alt="thinh" width="150px" height="150px"></a>
+	<div class="imgthumbnail-container">
+		<a href="assets/images/ghost.png"><img class="imgthumbnail" src="assets/images/ghost.png" alt="thinh" width="150px" height="150px"></a>
+	</div>
 	
 	<!-- imgfadeinaboxcontainer -->
-	<div class="imgfadeinaboxcontainer">
-		<img class="image" src="assets/images/ghost.png" width="100px" height="100px" alt="thinh" >
-		<div class="middle">
-			<div class="text">Ghost</div>
+	<div class="imgfadeinaboxcontainer-wrap">
+		<div class="imgfadeinaboxcontainer">
+			<img class="image" src="assets/images/ghost.png" width="100px" height="100px" alt="thinh" >
+			<div class="middle">
+				<div class="text">Ghost</div>
+			</div>
 		</div>
 	</div>
 
+
 	<!-- image box-reflect -->
-	<div class="box-reflect">
-		<img src="assets/images/ghost.png" alt="thinh">
+	<div class="box-reflect-container">
+		<div class="box-reflect">
+			<img src="assets/images/ghost.png" alt="thinh">
+		</div>
 	</div>
 
+
 	<!-- gradient textbox -->
-	<div class="gradient-textbox">
-		<p>ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
-			ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
-			ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
-			ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
+	<div class="gradient-textbox-container">
+		<div class="gradient-textbox">
+			<p>ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
+				ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
+				ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
 				ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
 					ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
 						ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
 							ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
-				ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
+								ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
 					ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
 						ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
-				ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
+							ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
 					ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
-		</p>
+						ahihiahihiahihiahihiahihiahihihahihiahihiahihiahihiahihiahihiahihihahihi
+			</p>
+		</div>
 	</div>
+	
 
 	<!-- pagination -->
 	<div class="pagination">
@@ -564,10 +349,13 @@
 	</div>
 
 	<!-- columns paragraph -->
-	<div class="columns-paragraph" style="width: 50%;height: 200px;resize: vertical;overflow: auto;resize: none;">
-		<h2>Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet</h2>
-		Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+	<div class="columns-paragraph-container">
+		<div class="columns-paragraph">
+			<h2>Lorem Ipsum Dolor Sit Amet Lorem Ipsum Dolor Sit Amet</h2>
+			Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi. Nam liber tempor cum soluta nobis eleifend option congue nihil imperdiet doming id quod mazim placerat facer possim assum.
+		</div>
 	</div>
+	
 
 	<!-- flex -->
 	<div class="flex-container">
@@ -632,172 +420,174 @@
 	</script>
 
 	<!-- image overlay hover -->
-	<div class="item">
-		<div class="item-top">
-			<img src="assets/images/product_fashion_19_a_3.jpeg" alt="">
-			<div class="overlay-item1">
-				<button class="addtocard">Add to Card</button>
-			</div>
-			<div class="overlay-item2">
-				<div><span>Add to Wish List</span><i class="fa-solid fa-caret-right"></i><a href=""><i class="fa-regular fa-star" aria-hidden="true"></i></a></div>
-				<div><span>Add to Compare</span><i class="fa-solid fa-caret-right"></i><a href=""><i class="fa fa-code-compare" aria-hidden="true"></i></a></div>
-				<div><span>Quick View</span><i class="fa-solid fa-caret-right"></i><a href=""><i class="fa-regular fa-eye" aria-hidden="true"></i></a></div> 
-			</div>
-			<div class="overlay-item3">
-				<img src="assets/images/product_fashion_04_2.jpeg" alt="">
-			</div>
-		</div>
-		<div class="item-center">
-			<a href="">Wedge-Heeled Espadrilles</a>
-			<p>$6.00</p><p id="line-through">$25.00</p>
-		</div>
-		<div class="item-bottom">
-			<div class="item-bottom-color">
-				<div class="color">
-					<a style="background-color: white;border:1px solid lightgray"></a>
+	<div class="item-container">
+		<div class="item">
+			<div class="item-top">
+				<img src="assets/images/product_fashion_19_a_3.jpeg" alt="">
+				<div class="overlay-item1">
+					<button class="addtocard">Add to Card</button>
 				</div>
-				<div class="tooltip-text">
-					<span>White</span><i class="fa-solid fa-caret-down"></i>
+				<div class="overlay-item2">
+					<div><span>Add to Wish List</span><i class="fa-solid fa-caret-right"></i><a href=""><i class="fa-regular fa-star" aria-hidden="true"></i></a></div>
+					<div><span>Add to Compare</span><i class="fa-solid fa-caret-right"></i><a href=""><i class="fa fa-code-compare" aria-hidden="true"></i></a></div>
+					<div><span>Quick View</span><i class="fa-solid fa-caret-right"></i><a href=""><i class="fa-regular fa-eye" aria-hidden="true"></i></a></div> 
+				</div>
+				<div class="overlay-item3">
+					<img src="assets/images/product_fashion_04_2.jpeg" alt="">
 				</div>
 			</div>
-			<div class="item-bottom-color">
-				<div class="color">
-					<a style="background-color:rgb(143, 107, 7);"></a>
+			<div class="item-center">
+				<a href="">Wedge-Heeled Espadrilles</a>
+				<p>$6.00</p><p id="line-through">$25.00</p>
+			</div>
+			<div class="item-bottom">
+				<div class="item-bottom-color">
+					<div class="color">
+						<a style="background-color: white;border:1px solid lightgray"></a>
+					</div>
+					<div class="tooltip-text">
+						<span>White</span><i class="fa-solid fa-caret-down"></i>
+					</div>
 				</div>
-				<div class="tooltip-text">
-					<span>Brown</span><i class="fa-solid fa-caret-down"></i>
+				<div class="item-bottom-color">
+					<div class="color">
+						<a style="background-color:rgb(143, 107, 7);"></a>
+					</div>
+					<div class="tooltip-text">
+						<span>Brown</span><i class="fa-solid fa-caret-down"></i>
+					</div>
 				</div>
 			</div>
 		</div>
 	</div>
 	
-
-
-
-	<div class="store-content font1">
-        <div class="store-wrap">
-            <div class="item1">
-                <div class="item1-head">
-                    <input id="searchlocationinput" type="text" placeholder="Enter a location">
-                    <button id="searchlocationbutton">Search</button>
-                </div>
-                <div class="item1-content">
-                    <div class="item1-content-item">
-                        <div class="item1-content-item-img">
-                            <div class="item1-content-item-img-left">
-                                <img src="assets/images/store1.png" alt="">
-                            </div>
-                            <div class="item1-content-item-img-right">
-                                <h2>Los Angeles</h2>
-                                <p>City: Chicago</p>
-                                <p>Zip: 60185</p>
-                                <p>Country: United States</p>
-                                <p>Address: 7316 Sugar St</p>
-                                <a href="">View Detail</a>
-                            </div>
-                        </div>
-                        <div class="item1-content-item-time">
-                            Opening Hours: 08 : 00 AM - 05 : 00 PM
-                        </div>
-                    </div>
-                    <div class="item1-content-item">
-                        <div class="item1-content-item-img">
-                            <div class="item1-content-item-img-left">
-                                <img src="assets/images/store2.png" alt="">
-                            </div>
-                            <div class="item1-content-item-img-right">
-                                <h2>Harvey</h2>
-                                <p>City: Harvey</p>
-                                <p>Zip: 60426</p>
-                                <p>Country: United States</p>
-                                <p>Address: 845 Briarwood St</p>
-                                <a href="">View Detail</a>
-                            </div>
-                        </div>
-                        <div class="item1-content-item-time">
-                            Opening Hours: 08 : 00 AM - 05 : 00 PM
-                        </div>
-                    </div>
-                    <div class="item1-content-item">
-                        <div class="item1-content-item-img">
-                            <div class="item1-content-item-img-left">
-                                <img src="store3.png" alt="">
-                            </div>
-                            <div class="item1-content-item-img-right">
-                                <h2>Alpharetta</h2>
-                                <p>City: Alpharetta</p>
-                                <p>Zip: 30004</p>
-                                <p>Country: United States</p>
-                                <p>Address: 909 Fifth St</p>
-                                <a href="">View Detail</a>
-                            </div>
-                        </div>
-                        <div class="item1-content-item-time">
-                            Opening Hours: 08 : 00 AM - 05 : 00 PM
-                        </div>
-                    </div>
-                    <div class="item1-content-item">
-                        <div class="item1-content-item-img">
-                            <div class="item1-content-item-img-left">
-                                <img src="assets/images/store4.png" alt="">
-                            </div>
-                            <div class="item1-content-item-img-right">
-                                <h2>Midland</h2>
-                                <p>City: Midland</p>
-                                <p>Zip: 48640</p>
-                                <p>Country: United States</p>
-                                <p>Address: 942 Valley Farms St</p>
-                                <a href="">View Detail</a>
-                            </div>
-                        </div>
-                        <div class="item1-content-item-time">
-                            Opening Hours: 08 : 00 AM - 05 : 00 PM
-                        </div>
-                    </div>
-                    <div class="item1-content-item">
-                        <div class="item1-content-item-img">
-                            <div class="item1-content-item-img-left">
-                                <img src="assets/images/store5.png" alt="">
-                            </div>
-                            <div class="item1-content-item-img-right">
-                                <h2>Sheboygan</h2>
-                                <p>City: Sheboygan</p>
-                                <p>Zip: 48640</p>
-                                <p>Country: United States</p>
-                                <p>Address: 7269 Edgewood St</p>
-                                <a href="">View Detail</a>
-                            </div>
-                        </div>
-                        <div class="item1-content-item-time">
-                            Opening Hours: 08 : 00 AM - 05 : 00 PM
-                        </div>
-                    </div>
-                    <div class="item1-content-item">
-                        <div class="item1-content-item-img">
-                            <div class="item1-content-item-img-left">
-                                <img src="assets/images/store2_1.png" alt="">
-                            </div>
-                            <div class="item1-content-item-img-right">
-                                <h2>Glenview</h2>
-                                <p>City: Glenview</p>
-                                <p>Zip: 60025</p>
-                                <p>Country: United States</p>
-                                <p>Address: 383 Marlborough Road</p>
-                                <a href="">View Detail</a>
-                            </div>
-                        </div>
-                        <div class="item1-content-item-time">
-                            Opening Hours: 08 : 00 AM - 05 : 00 PM
-                        </div>
-                    </div>
-                </div>
-                
-            </div>
-            <div class="item2" id="googleMap">
-                Maps
-            </div>
-        </div>
-    </div>
+	
+	<!-- map + search -->
+	<div class="mapsearch-container">
+		<div class="mapsearch-content">
+			<div class="mapsearch-wrap">
+				<div class="item1">
+					<div class="item1-head">
+						<input id="searchlocationinput" type="text" placeholder="Enter a location">
+						<button id="searchlocationbutton">Search</button>
+					</div>
+					<div class="item1-content">
+						<div class="item1-content-item">
+							<div class="item1-content-item-img">
+								<div class="item1-content-item-img-left">
+									<img src="assets/images/store1.png" alt="">
+								</div>
+								<div class="item1-content-item-img-right">
+									<h2>Los Angeles</h2>
+									<p>City: Chicago</p>
+									<p>Zip: 60185</p>
+									<p>Country: United States</p>
+									<p>Address: 7316 Sugar St</p>
+									<a href="">View Detail</a>
+								</div>
+							</div>
+							<div class="item1-content-item-time">
+								Opening Hours: 08 : 00 AM - 05 : 00 PM
+							</div>
+						</div>
+						<div class="item1-content-item">
+							<div class="item1-content-item-img">
+								<div class="item1-content-item-img-left">
+									<img src="assets/images/store2.png" alt="">
+								</div>
+								<div class="item1-content-item-img-right">
+									<h2>Harvey</h2>
+									<p>City: Harvey</p>
+									<p>Zip: 60426</p>
+									<p>Country: United States</p>
+									<p>Address: 845 Briarwood St</p>
+									<a href="">View Detail</a>
+								</div>
+							</div>
+							<div class="item1-content-item-time">
+								Opening Hours: 08 : 00 AM - 05 : 00 PM
+							</div>
+						</div>
+						<div class="item1-content-item">
+							<div class="item1-content-item-img">
+								<div class="item1-content-item-img-left">
+									<img src="assets/images/store3.png" alt="">
+								</div>
+								<div class="item1-content-item-img-right">
+									<h2>Alpharetta</h2>
+									<p>City: Alpharetta</p>
+									<p>Zip: 30004</p>
+									<p>Country: United States</p>
+									<p>Address: 909 Fifth St</p>
+									<a href="">View Detail</a>
+								</div>
+							</div>
+							<div class="item1-content-item-time">
+								Opening Hours: 08 : 00 AM - 05 : 00 PM
+							</div>
+						</div>
+						<div class="item1-content-item">
+							<div class="item1-content-item-img">
+								<div class="item1-content-item-img-left">
+									<img src="assets/images/store4.png" alt="">
+								</div>
+								<div class="item1-content-item-img-right">
+									<h2>Midland</h2>
+									<p>City: Midland</p>
+									<p>Zip: 48640</p>
+									<p>Country: United States</p>
+									<p>Address: 942 Valley Farms St</p>
+									<a href="">View Detail</a>
+								</div>
+							</div>
+							<div class="item1-content-item-time">
+								Opening Hours: 08 : 00 AM - 05 : 00 PM
+							</div>
+						</div>
+						<div class="item1-content-item">
+							<div class="item1-content-item-img">
+								<div class="item1-content-item-img-left">
+									<img src="assets/images/store5.png" alt="">
+								</div>
+								<div class="item1-content-item-img-right">
+									<h2>Sheboygan</h2>
+									<p>City: Sheboygan</p>
+									<p>Zip: 48640</p>
+									<p>Country: United States</p>
+									<p>Address: 7269 Edgewood St</p>
+									<a href="">View Detail</a>
+								</div>
+							</div>
+							<div class="item1-content-item-time">
+								Opening Hours: 08 : 00 AM - 05 : 00 PM
+							</div>
+						</div>
+						<div class="item1-content-item">
+							<div class="item1-content-item-img">
+								<div class="item1-content-item-img-left">
+									<img src="assets/images/store2_1.png" alt="">
+								</div>
+								<div class="item1-content-item-img-right">
+									<h2>Glenview</h2>
+									<p>City: Glenview</p>
+									<p>Zip: 60025</p>
+									<p>Country: United States</p>
+									<p>Address: 383 Marlborough Road</p>
+									<a href="">View Detail</a>
+								</div>
+							</div>
+							<div class="item1-content-item-time">
+								Opening Hours: 08 : 00 AM - 05 : 00 PM
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="item2" id="googleMap">
+					Maps
+				</div>
+			</div>
+		</div>
+	</div>
     <script>
         function myMap(){
             let losangeles=[34.675660545473804, -118.17073544418197];
@@ -896,207 +686,211 @@
         })
     </script>
 
-
-	
-	 <div class="faq-content-foot">
-		<div class="faq-content-foot-item eq1">
-			<h3>Available Payment</h3>
-			<a id="plus"><i class="fa-sharp fa-solid fa-plus"></i></a>
-			<a id="minus"><i class="fa fa-minus"></i></a>
-		</div>
-		<div class="faq-content-foot-item-dropdown eq1-dropdown">
-			<p>So beautiful you’ll want to show it off, so comfortable you’ll forget it’s there. Our 24/7™ Lace Contour Plunge Bra combines gorgeous floral lace with sheer overlay straps that hold you in and eliminates gaping. Removable pads let you customize you</p>
-			<ul>
-				<li>Cropped pink crepe knit top</li>
-				<li>Square neckline</li>
-				<li>Embroidered Aje logo</li>
-				<li>Cross back straps</li>
-			</ul>
-		</div>
-		<div class="faq-content-foot-item eq2">
-			<h3>Order History and Disputes</h3>
-			<a id="plus"><i class="fa-sharp fa-solid fa-plus"></i></a>
-			<a id="minus"><i class="fa fa-minus"></i></a>
-		</div>
-		<div class="faq-content-foot-item-dropdown eq2-dropdown">
-			<p>So beautiful you’ll want to show it off, so comfortable you’ll forget it’s there. Our 24/7™ Lace Contour Plunge Bra combines gorgeous floral lace with sheer overlay straps that hold you in and eliminates gaping. Removable pads let you customize you</p>
-			<ul>
-				<li>Cropped pink crepe knit top</li>
-				<li>Square neckline</li>
-				<li>Embroidered Aje logo</li>
-				<li>Cross back straps</li>
-			</ul>
-		</div>
-		<div class="faq-content-foot-item eq3">
-			<h3>Shipping and Handling</h3>
-			<a id="plus"><i class="fa-sharp fa-solid fa-plus"></i></a>
-			<a id="minus"><i class="fa fa-minus"></i></a>
-		</div>
-		<div class="faq-content-foot-item-dropdown eq3-dropdown">
-			<p>So beautiful you’ll want to show it off, so comfortable you’ll forget it’s there. Our 24/7™ Lace Contour Plunge Bra combines gorgeous floral lace with sheer overlay straps that hold you in and eliminates gaping. Removable pads let you customize you</p>
-			<ul>
-				<li>Cropped pink crepe knit top</li>
-				<li>Square neckline</li>
-				<li>Embroidered Aje logo</li>
-				<li>Cross back straps</li>
-			</ul>
-		</div>
-		<div class="faq-content-foot-item eq4">
-			<h3>Gift Cards</h3>
-			<a id="plus"><i class="fa-sharp fa-solid fa-plus"></i></a>
-			<a id="minus"><i class="fa fa-minus"></i></a>
-		</div>
-		<div class="faq-content-foot-item-dropdown eq4-dropdown">
-			<p>So beautiful you’ll want to show it off, so comfortable you’ll forget it’s there. Our 24/7™ Lace Contour Plunge Bra combines gorgeous floral lace with sheer overlay straps that hold you in and eliminates gaping. Removable pads let you customize you</p>
-			<ul>
-				<li>Cropped pink crepe knit top</li>
-				<li>Square neckline</li>
-				<li>Embroidered Aje logo</li>
-				<li>Cross back straps</li>
-			</ul>
-		</div>
-		<div class="faq-content-foot-item eq5">
-			<h3>Return and Exchanges</h3>
-			<a id="plus"><i class="fa-sharp fa-solid fa-plus"></i></a>
-			<a id="minus"><i class="fa fa-minus"></i></a>
-		</div>
-		<div class="faq-content-foot-item-dropdown eq5-dropdown">
-			<p>So beautiful you’ll want to show it off, so comfortable you’ll forget it’s there. Our 24/7™ Lace Contour Plunge Bra combines gorgeous floral lace with sheer overlay straps that hold you in and eliminates gaping. Removable pads let you customize you</p>
-			<ul>
-				<li>Cropped pink crepe knit top</li>
-				<li>Square neckline</li>
-				<li>Embroidered Aje logo</li>
-				<li>Cross back straps</li>
-			</ul>
-		</div>
+	<!-- responsive dropdownmenu -->
+	<div class="contact container-fluid">
+		<div class="row">
+			<div class="contact-item col-md-12 col-lg-3 first">
+				<h2>Company</h2>
+				<p>Find a location nearest you.</p>
+				<a href="">See Our Stores</a>
+				<br>
+				<a href="">+391 (0)35 2568 4593</a>
+				<a href="">hello@domain.com</a>
+			</div>
+			<div class="contact-item col-md-12 col-lg-3 toborder">
+				<div>
+					<h2>Information</h2>
+					<a href="">My account</a>
+					<a href="">Login</a>
+					<a href="">My cart</a>
+					<a href="">Wishlist</a>
+					<a href="">Check out</a>
+				</div>
+				<div class="contact-responsive-item information-menu">
+					<h2>Information</h2>
+					<a id="plus"><i class="fa-sharp fa-solid fa-plus"></i></a>
+					<a id="minus"><i class="fa fa-minus"></i></a>
+				</div>
+				<div class="infomation">
+					<a href="">My account</a>
+					<a href="">Login</a>
+					<a href="">My cart</a>
+					<a href="">Wishlist</a>
+					<a href="">Check out</a>
+				</div>
+			</div>
+			<div class="contact-item col-md-12 col-lg-3 toborder">
+				<div>
+					<h2>Services</h2>
+					<a href="">About Us</a>
+					<a href="">Privacy Policy</a>
+					<a href="">Faq's</a>
+					<a href="">Contact us</a>
+					<a href="">Delivery Information</a>
+				</div>
+				<div class="contact-responsive-item services-menu">
+					<h2>Services</h2>
+					<a id="plus"><i class="fa-sharp fa-solid fa-plus"></i></a>
+					<a id="minus"><i class="fa fa-minus"></i></a>
+				</div>
+				<div class="services">
+					<a href="">About Us</a>
+					<a href="">Privacy Policy</a>
+					<a href="">Faq's</a>
+					<a href="">Contact us</a>
+					<a href="">Delivery Information</a>
+				</div>
+			</div>
+			<div class="contact-item col-md-12 col-lg-3 last">
+				<h2>Subscribe</h2>
+				<p>Enter your email below to be the first to know about new collections and product launches.</p>
+				<div class="email">
+					<i class="fa fa-envelope" aria-hidden="true"></i><input type="text" placeholder="Your email address"><button><i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+				</div>
+			</div>
+		</div> 
 	</div>
 	<script>
-         let faqindexeq1=0;
-        let faqindexeq2=0;
-        let faqindexeq3=0;
-        let faqindexeq4=0;
-        let faqindexeq5=0;
-        function faqdropdown(selector,faqindex){
-            if (faqindex%2!=0){
-                $(selector).css({"border-bottom":"1px solid black"});
-                $(selector).children("#plus").css({"display":"none"});
-                $(selector).children("#minus").css({"display":"block"});
-            }
-            else{
-                $(selector).css({"border-bottom":"1px solid lightgray"});
-                $(selector).children("#plus").css({"display":"block"});
-                $(selector).children("#minus").css({"display":"none"});
-        }
-        }
+		let informationmenuindex=0;
+		let servicesmenuindex=0;
+		$(".contact-responsive-item").children("#minus").hide();
+		$(".information-menu").click(function name(params) {
+			$(".infomation").slideToggle();
+			informationmenuindex++;
+			if (informationmenuindex%2!=0){
+				$(this).children("#plus").css({"display":"none"});
+				$(this).children("#minus").css({"display":"block"});
+			}
+			else{
+				$(this).children("#plus").css({"display":"block"});
+				$(this).children("#minus").css({"display":"none"});
+			}
+		})
+		$(".services-menu").click(function name(params) {
+			$(".services").slideToggle();
+			servicesmenuindex++;
+			if (servicesmenuindex%2!=0){
+				$(this).children("#plus").css({"display":"none"});
+				$(this).children("#minus").css({"display":"block"});
+			}
+			else{
+				$(this).children("#plus").css({"display":"block"});
+				$(this).children("#minus").css({"display":"none"});
+			}
+		})
+	</script>
 
-        $(".eq1").bind("click",function name(params) {
-            $(".eq1-dropdown").slideToggle();
-            faqindexeq1++;
-            faqdropdown(this,faqindexeq1);
-        })
-        $(".eq2").bind("click",function name(params) {
-            $(".eq2-dropdown").slideToggle();
-            faqindexeq2++;
-            faqdropdown(this,faqindexeq2);
-        })
-        $(".eq3").bind("click",function name(params) {
-            $(".eq3-dropdown").slideToggle();
-            faqindexeq3++;
-            faqdropdown(this,faqindexeq3);
-        })
-        $(".eq4").bind("click",function name(params) {
-            $(".eq4-dropdown").slideToggle();
-            faqindexeq4++;
-            faqdropdown(this,faqindexeq4);
-        })
-        $(".eq5").bind("click",function name(params) {
-            $(".eq5-dropdown").slideToggle();
-            faqindexeq5++;
-            faqdropdown(this,faqindexeq5);
-        })
-    </script> 
-	<div class="section-collection-head font1">
-        <span>Section Collection</span>
-        <div class="arrow">
-            <a><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
-            <a><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-        </div>
-    </div>
-    <div class="section-collection-content font1">
-        <div class="item zoom">
-            <div class="content">
-                <div class="text">
-                    <h2>Sneakers</h2>
-                    <p>8 items</p>
-                </div>
-                <a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-            </div>
-        </div>
-        <div class="item zoom">
-            <div class="content">
-                <div class="text">
-                    <h2>Leather Bag</h2>
-                    <p>5 items</p>
-                </div>
-                <a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-            </div>
-        </div>
-        <div class="item zoom">
-            <div class="content">
-                <div class="text">
-                    <h2>Shoes</h2>
-                    <p>10 items</p>
-                </div>
-                <a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-            </div>
-        </div>
-        <div class="item zoom">
-            <div class="content">
-                <div class="text">
-                    <h2>Blazers</h2>
-                    <p>8 items</p>
-                </div>
-                <a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-            </div>
-        </div>
-        <div class="item zoom">
-            <div class="content">
-                <div class="text">
-                    <h2>Tops</h2>
-                    <p>9 items</p>
-                </div>
-                <a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-            </div>
-        </div>
-        <div class="item zoom">
-            <div class="content">
-                <div class="text">
-                    <h2>Glasses</h2>
-                    <p>6 items</p>
-                </div>
-                <a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-            </div>
-        </div>
-        <div class="item zoom">
-            <div class="content">
-                <div class="text">
-                    <h2>Sandals</h2>
-                    <p>11 items</p>
-                </div>
-                <a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-            </div>
-        </div>
-        <div class="item zoom">
-            <div class="content">
-                <div class="text">
-                    <h2>Basic</h2>
-                    <p>10 items</p>
-                </div>
-                <a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
-            </div>
-        </div>
-    </div> 
-	
+
+	<!-- scroll slide image -->
+	<div class="section-collection-container">
+		<div class="section-collection-head container-fluid">
+			<div class="row d-flex justify-content-center align-items-center">
+				<span class="col-8 text-start">Section Collection</span>
+				<div class="arrow col-4 text-end">
+					<a><i class="fa fa-arrow-left" aria-hidden="true"></i></a>
+					<a><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+				</div>
+			</div>
+		</div>
+		<div class="section-collection-content">
+			<div class="item">
+				<div class="content">
+					<img src="assets/images/cat_01.jpg" alt="">
+					<div class="text">
+						<div class="text-content">
+							<h2>Sneakers</h2>
+							<p>8 items</p>
+						</div>
+						<a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="content">
+					<img src="assets/images/cat_02.jpg" alt="">
+					<div class="text">
+						<div class="text-content">
+							<h2>Sneakers</h2>
+							<p>8 items</p>
+						</div>
+						<a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="content">
+					<img src="assets/images/cat_03.jpg" alt="">
+					<div class="text">
+						<div class="text-content">
+							<h2>Sneakers</h2>
+							<p>8 items</p>
+						</div>
+						<a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="content">
+					<img src="assets/images/cat_04.jpg" alt="">
+					<div class="text">
+						<div class="text-content">
+							<h2>Sneakers</h2>
+							<p>8 items</p>
+						</div>
+						<a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="content">
+					<img src="assets/images/cat_05.jpg" alt="">
+					<div class="text">
+						<div class="text-content">
+							<h2>Sneakers</h2>
+							<p>8 items</p>
+						</div>
+						<a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="content">
+					<img src="assets/images/cat_06.jpg" alt="">
+					<div class="text">
+						<div class="text-content">
+							<h2>Sneakers</h2>
+							<p>8 items</p>
+						</div>
+						<a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="content">
+					<img src="assets/images/cat_07.jpg" alt="">
+					<div class="text">
+						<div class="text-content">
+							<h2>Sneakers</h2>
+							<p>8 items</p>
+						</div>
+						<a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<div class="content">
+					<img src="assets/images/cat_08.jpg" alt="">
+					<div class="text">
+						<div class="text-content">
+							<h2>Sneakers</h2>
+							<p>8 items</p>
+						</div>
+						<a href=""><i class="fa fa-arrow-right" aria-hidden="true"></i></a>
+					</div>
+				</div>
+			</div>
+		</div>  
+	</div>
 	<script>
         let wrapper = document.querySelector(".section-collection-content");
         let pressed = false;
@@ -1135,15 +929,7 @@
         if (wrapper.scrollLeft==0){
             $(".arrow").children("a").first().css({"color":"gray"})
         }
-        let bg = document.getElementsByClassName("zoom");
-        bg[0].style.backgroundImage = "url('assets/images/cat_01.jpg')";
-        bg[1].style.backgroundImage = "url('assets/images/cat_02.jpg')";
-        bg[2].style.backgroundImage = "url('assets/images/cat_03.jpg')";
-        bg[3].style.backgroundImage = "url('assets/images/cat_04.jpg')";
-        bg[4].style.backgroundImage = "url('assets/images/cat_05.jpg')";
-        bg[5].style.backgroundImage = "url('assets/images/cat_06.jpg')";
-        bg[6].style.backgroundImage = "url('assets/images/cat_07.jpg')";
-        bg[7].style.backgroundImage = "url('assets/images/cat_08.jpg')";
+		
     </script> 
 </body>
 	
