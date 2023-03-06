@@ -1423,6 +1423,40 @@
 		</div>
 	</div>
 	
+	<!-- countdown timer -->
+	<div id="countdown">
+		<span id="day"></span>
+		<span id="label">Day</span>
+		<span id="hour"></span>
+		<span id="label">Hour</span>
+		<span id="min"></span>
+		<span id="label">Min</span>
+		<span id="sec"></span>
+		<span id="label">Sec</span>
+	</div>
+	<div id="expired">EXPIRED</div>
+	<script>
+		var deadline = new Date("Dec 31, 2023 23:59:59").getTime();
+		var x = setInterval(function() {
+		var now = new Date().getTime();
+		var t = deadline - now;
+		var days = Math.floor(t / (1000 * 60 * 60 * 24));
+		var hours = Math.floor((t%(1000 * 60 * 60 * 24))/(1000 * 60 * 60));
+		var minutes = Math.floor((t % (1000 * 60 * 60)) / (1000 * 60));
+		var seconds = Math.floor((t % (1000 * 60)) / 1000);
+		document.getElementById("day").innerHTML=days;
+		document.getElementById("hour").innerHTML=hours;
+		document.getElementById("min").innerHTML=minutes;
+		document.getElementById("sec").innerHTML=seconds;
+		// document.getElementById("demo").innerHTML = days + "d " 
+		// + hours + "h " + minutes + "m " + seconds + "s ";
+			if (t < 0) {
+				clearInterval(x);
+				document.getElementById("expired").style.display = "block";
+				document.getElementById("countdown").style.display = "none";
+				} 
+		}, 1000);
+	</script>
 </body>
 	
 </html> 

@@ -2141,4 +2141,23 @@ audio {
   line-height: 30px;
   margin: 0;
   margin-top: 25px;
+}
+
+#expired {
+  display: none;
+  font-size: 60px;
+  text-align: center;
+}
+
+#countdown {
+  font-family: "Jost";
+  text-align: center;
+}
+#countdown #label {
+  text-align: center;
+  font-size: 20px;
+}
+#countdown #day, #countdown #hour, #countdown #min, #countdown #sec {
+  text-align: center;
+  font-size: 60px;
 }/*# sourceMappingURL=style.css.map */
