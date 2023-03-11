@@ -1781,3 +1781,47 @@ audio{
 
 }
 
+
+//CSS menu
+.menu{
+    text-align: center;
+    margin: 20px auto;
+    padding-bottom: 20px;
+    @include font($fontJost);
+    width: 100%;
+    ul{
+        width: 100%;
+        padding: 0;
+        margin: 0;
+        list-style-type: none;
+        margin: auto;
+        li{
+            float: left;
+            margin-right: 20px;
+            transition: .3s; 
+            a{
+                text-decoration: none;
+                color: black;
+               
+            }
+            &:first-of-type::after{
+                content: "";
+                background-color: rgba(175, 33, 33, 0.829);
+                height: 2px;
+                display: block;
+            }
+            @keyframes lihover {
+                0%{width: 0%};
+                100%{width: 100%;}
+            }
+            &:hover::after{
+                content: "";
+                margin: auto;
+                background-color: rgba(175, 33, 33, 0.829);
+                height: 2px;
+                display: block; 
+                animation: lihover .3s;            
+            }
+        }
+    }
+}

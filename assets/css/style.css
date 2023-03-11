@@ -2160,4 +2160,50 @@ audio {
 #countdown #day, #countdown #hour, #countdown #min, #countdown #sec {
   text-align: center;
   font-size: 60px;
+}
+
+.menu {
+  text-align: center;
+  margin: 20px auto;
+  padding-bottom: 20px;
+  font-family: "Jost";
+  width: 100%;
+}
+.menu ul {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  margin: auto;
+}
+.menu ul li {
+  float: left;
+  margin-right: 20px;
+  transition: 0.3s;
+}
+.menu ul li a {
+  text-decoration: none;
+  color: black;
+}
+.menu ul li:first-of-type::after {
+  content: "";
+  background-color: rgba(175, 33, 33, 0.829);
+  height: 2px;
+  display: block;
+}
+@keyframes lihover {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+.menu ul li:hover::after {
+  content: "";
+  margin: auto;
+  background-color: rgba(175, 33, 33, 0.829);
+  height: 2px;
+  display: block;
+  animation: lihover 0.3s;
 }/*# sourceMappingURL=style.css.map */
