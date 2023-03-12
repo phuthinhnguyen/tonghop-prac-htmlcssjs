@@ -362,4 +362,56 @@
         }
     }
 }
+@mixin gradientcircle($percent){
+    //1percent = 3.6deg
+    background-image: conic-gradient(#908ced 0%, #b56fe8 $percent*1%, rgb(50, 50, 50)  ($percent*3.6+deg) ,rgb(50, 50, 50) 360deg);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .black-circle{
+        display: inline-block;
+        background-color: black;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        color: white;
+        text-align: center;
+        line-height: 100px;
+    }
+}
+@mixin menuslideitem{
+    width: 50px;
+    overflow: hidden;
+    height: 50px;
+    line-height: 30px;
+    text-align: left;
+    padding: 10px;
+    transition: .5s;
+    background-color: rgb(66,103,178);
+    border-top-right-radius: 80%;
+    border-bottom-right-radius: 80%;
+        i{
+            color: white;
+            margin-left: 5px;
+        }
+        div{
+            display: none;
+            margin-left: 20px;
+            color: white;
+            font-weight: 500;
+            width: 0;
+        }
+    &:hover{
+        cursor: pointer;
+        width: 120px;
+        border-top-right-radius: 4%;
+        border-bottom-right-radius: 4%;
+        div{
+            display: inline-block;
+        }
+    }
+}
 

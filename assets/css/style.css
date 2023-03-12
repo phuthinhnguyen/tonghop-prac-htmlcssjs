@@ -215,8 +215,59 @@ main .divtitle {
   background-color: #CF000F;
   text-decoration: none;
 }
-.button span {
+.button .a3 {
+  background-image: -webkit-linear-gradient(0deg, #908ced 0%, #b56fe8 100%);
+  border: 1px solid transparent;
+  color: #fff;
+  font-weight: 600;
+  padding: 8px 35px;
+  border-radius: 20px;
+  text-decoration: none;
+  font-size: 14px;
+  transition: 0.7s;
+}
+.button .a3:hover {
+  border: 1px solid #fff;
+  background: transparent;
+}
+.button .a4 {
+  display: inline-block;
+  position: relative;
+  width: 120px;
+  height: 40px;
+  text-align: center;
+  background-color: rgb(49, 49, 49);
   color: white;
+  line-height: 40px;
+  transition: 0.5s;
+}
+@keyframes overlaybutton4 {
+  0% {
+    width: 0;
+  }
+  50% {
+    width: 120px;
+  }
+  80% {
+    width: 110px;
+  }
+  100% {
+    width: 120px;
+  }
+}
+.button .a4 .overlay {
+  display: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 0;
+  background-color: red;
+  height: 100%;
+  animation: overlaybutton4 0.7s;
+}
+.button .a4:hover .overlay {
+  display: block;
+  width: 120px;
 }
 
 .ul {
@@ -2152,6 +2203,9 @@ audio {
 #countdown {
   font-family: "Jost";
   text-align: center;
+  color: white;
+  background-color: black;
+  padding: 20px;
 }
 #countdown #label {
   text-align: center;
@@ -2163,18 +2217,18 @@ audio {
 }
 
 .menu {
-  text-align: center;
-  margin: 20px auto;
-  padding-bottom: 20px;
   font-family: "Jost";
-  width: 100%;
+  background-color: black;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
 }
 .menu ul {
-  width: 100%;
   padding: 0;
   margin: 0;
   list-style-type: none;
-  margin: auto;
 }
 .menu ul li {
   float: left;
@@ -2183,7 +2237,7 @@ audio {
 }
 .menu ul li a {
   text-decoration: none;
-  color: black;
+  color: white;
 }
 .menu ul li:first-of-type::after {
   content: "";
@@ -2206,4 +2260,296 @@ audio {
   height: 2px;
   display: block;
   animation: lihover 0.3s;
+}
+
+.gradient-circle-container {
+  margin-top: 40px;
+  background-color: black;
+  padding: 30px;
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  justify-content: center;
+}
+.gradient-circle-container .gradient-circle1 {
+  background-image: conic-gradient(#908ced 0%, #b56fe8 75%, rgb(50, 50, 50) 270deg, rgb(50, 50, 50) 360deg);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gradient-circle-container .gradient-circle1 .black-circle {
+  display: inline-block;
+  background-color: black;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+.gradient-circle-container .gradient-circle2 {
+  background-image: conic-gradient(#908ced 0%, #b56fe8 95%, rgb(50, 50, 50) 342deg, rgb(50, 50, 50) 360deg);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gradient-circle-container .gradient-circle2 .black-circle {
+  display: inline-block;
+  background-color: black;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+.gradient-circle-container .gradient-circle3 {
+  background-image: conic-gradient(#908ced 0%, #b56fe8 85%, rgb(50, 50, 50) 306deg, rgb(50, 50, 50) 360deg);
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gradient-circle-container .gradient-circle3 .black-circle {
+  display: inline-block;
+  background-color: black;
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  color: white;
+  text-align: center;
+  line-height: 100px;
+}
+
+.menu-slide-container {
+  font-family: "Jost";
+  position: fixed;
+  left: 0;
+  top: 30%;
+  z-index: 2;
+}
+.menu-slide-container .menu-slide-item1 {
+  width: 50px;
+  overflow: hidden;
+  height: 50px;
+  line-height: 30px;
+  text-align: left;
+  padding: 10px;
+  transition: 0.5s;
+  background-color: rgb(66, 103, 178);
+  border-top-right-radius: 80%;
+  border-bottom-right-radius: 80%;
+}
+.menu-slide-container .menu-slide-item1 i {
+  color: white;
+  margin-left: 5px;
+}
+.menu-slide-container .menu-slide-item1 div {
+  display: none;
+  margin-left: 20px;
+  color: white;
+  font-weight: 500;
+  width: 0;
+}
+.menu-slide-container .menu-slide-item1:hover {
+  cursor: pointer;
+  width: 120px;
+  border-top-right-radius: 4%;
+  border-bottom-right-radius: 4%;
+}
+.menu-slide-container .menu-slide-item1:hover div {
+  display: inline-block;
+}
+.menu-slide-container .menu-slide-item2 {
+  width: 50px;
+  overflow: hidden;
+  height: 50px;
+  line-height: 30px;
+  text-align: left;
+  padding: 10px;
+  transition: 0.5s;
+  background-color: rgb(66, 103, 178);
+  border-top-right-radius: 80%;
+  border-bottom-right-radius: 80%;
+  background-color: rgb(85, 172, 238);
+}
+.menu-slide-container .menu-slide-item2 i {
+  color: white;
+  margin-left: 5px;
+}
+.menu-slide-container .menu-slide-item2 div {
+  display: none;
+  margin-left: 20px;
+  color: white;
+  font-weight: 500;
+  width: 0;
+}
+.menu-slide-container .menu-slide-item2:hover {
+  cursor: pointer;
+  width: 120px;
+  border-top-right-radius: 4%;
+  border-bottom-right-radius: 4%;
+}
+.menu-slide-container .menu-slide-item2:hover div {
+  display: inline-block;
+}
+.menu-slide-container .menu-slide-item3 {
+  width: 50px;
+  overflow: hidden;
+  height: 50px;
+  line-height: 30px;
+  text-align: left;
+  padding: 10px;
+  transition: 0.5s;
+  background-color: rgb(66, 103, 178);
+  border-top-right-radius: 80%;
+  border-bottom-right-radius: 80%;
+  background-color: rgb(203, 32, 39);
+}
+.menu-slide-container .menu-slide-item3 i {
+  color: white;
+  margin-left: 5px;
+}
+.menu-slide-container .menu-slide-item3 div {
+  display: none;
+  margin-left: 20px;
+  color: white;
+  font-weight: 500;
+  width: 0;
+}
+.menu-slide-container .menu-slide-item3:hover {
+  cursor: pointer;
+  width: 120px;
+  border-top-right-radius: 4%;
+  border-bottom-right-radius: 4%;
+}
+.menu-slide-container .menu-slide-item3:hover div {
+  display: inline-block;
+}
+
+.video-button {
+  font-family: "Jost";
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background-image: url("/assets/images/ct1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin-top: 40px;
+}
+.video-button .overlay {
+  background: rgba(5, 10, 52, 0.7);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 70px;
+  justify-content: center;
+}
+.video-button .overlay h2 {
+  font-size: 45px;
+}
+.video-button .overlay div {
+  position: relative;
+  width: 80px;
+  height: 80px;
+}
+@keyframes play {
+  0% {
+    transform: scale(1);
+  }
+  10% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  20% {
+    transform: scale(1.1);
+    opacity: 0.8;
+  }
+  30% {
+    transform: scale(1.15);
+    opacity: 0.7;
+  }
+  40% {
+    transform: scale(1.2);
+    opacity: 0.6;
+  }
+  50% {
+    transform: scale(1.25);
+    opacity: 0.5;
+  }
+  60% {
+    transform: scale(1.3);
+    opacity: 0.4;
+  }
+  70% {
+    transform: scale(1.35);
+    opacity: 0.3;
+  }
+  80% {
+    transform: scale(1.4);
+    opacity: 0.2;
+  }
+  90% {
+    transform: scale(1.45);
+    opacity: 0.1;
+  }
+  100% {
+    transform: scale(1.5);
+    opacity: 0;
+  }
+}
+.video-button .overlay div a {
+  text-decoration: none;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.video-button .overlay div a:first-of-type {
+  animation: play 1.2s;
+  animation-iteration-count: infinite;
+}
+.video-button .overlay div a i {
+  font-size: 25px;
+  color: goldenrod;
+}
+.video-button .overlay p {
+  font-size: 25px;
+}
+
+.owl-carousel-container {
+  margin-top: 40px;
+  background-color: black;
+}
+.owl-carousel-container .owl-carousel {
+  padding: 30px 70px;
+}
+.owl-carousel-container .owl-carousel .item img {
+  width: 50%;
+  height: auto;
+  filter: grayscale(100%);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.owl-carousel-container .owl-carousel .item img:hover {
+  cursor: pointer;
+  filter: grayscale(0);
 }/*# sourceMappingURL=style.css.map */
