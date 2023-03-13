@@ -225,49 +225,73 @@ main .divtitle {
   text-decoration: none;
   font-size: 14px;
   transition: 0.7s;
+  cursor: pointer;
 }
 .button .a3:hover {
   border: 1px solid #fff;
   background: transparent;
 }
 .button .a4 {
+  text-decoration: none;
+  background: gray;
+  text-transform: capitalize;
+  padding: 22px 35px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 500;
+  font-size: 18px;
   display: inline-block;
+  line-height: 1;
+  -moz-user-select: none;
+  letter-spacing: 1px;
+  line-height: 0;
+  overflow: hidden;
+  cursor: pointer;
+  transition: color 0.4s linear;
   position: relative;
-  width: 120px;
-  height: 40px;
-  text-align: center;
-  background-color: rgb(49, 49, 49);
-  color: white;
-  line-height: 40px;
-  transition: 0.5s;
+  z-index: 1;
 }
-@keyframes overlaybutton4 {
-  0% {
-    width: 0;
-  }
-  50% {
-    width: 120px;
-  }
-  80% {
-    width: 110px;
-  }
-  100% {
-    width: 120px;
-  }
-}
-.button .a4 .overlay {
-  display: none;
+.button .a4::before {
+  content: "";
   position: absolute;
   left: 0;
   top: 0;
-  width: 0;
-  background-color: red;
-  height: 100%;
-  animation: overlaybutton4 0.7s;
+  width: 101%;
+  height: 101%;
+  background: red;
+  z-index: 1;
+  transition: transform 0.5s;
+  transition-timing-function: ease;
+  transform-origin: 0 0;
+  transition-timing-function: cubic-bezier(0.5, 1.6, 0.4, 0.7);
+  transform: scaleX(0);
 }
-.button .a4:hover .overlay {
-  display: block;
-  width: 120px;
+.button .a4:hover::before {
+  transform: scaleX(1);
+  color: #fff !important;
+  z-index: -1;
+}
+.button .a5 {
+  color: white;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  font-size: 14px;
+  line-height: 40px;
+  display: inline-block;
+  text-align: center;
+  margin-right: 8px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+.button .a5 i {
+  transition: 0.4s;
+}
+.button .a5:hover {
+  color: #9F78FF;
+}
+.button .a5:hover i {
+  transform: rotateY(180deg);
 }
 
 .ul {
@@ -2440,7 +2464,7 @@ audio {
   position: relative;
   width: 100%;
   height: 500px;
-  background-image: url("assets/images/ct1.jpg");
+  background-image: url(/assets/images/ct1.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2552,4 +2576,20 @@ audio {
 .owl-carousel-container .owl-carousel .item img:hover {
   cursor: pointer;
   filter: grayscale(0);
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translateZ(0);
+  }
+}
+.fadeInUp {
+  animation-name: fadeInUp;
+  animation-duration: 2s;
+  animation-delay: 0.2s;
 }/*# sourceMappingURL=style.css.map */
