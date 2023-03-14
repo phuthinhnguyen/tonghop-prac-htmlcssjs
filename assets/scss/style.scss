@@ -670,7 +670,6 @@ audio{
         height:300px;
         -webkit-mask-image: linear-gradient(black,transparent);
         overflow-y: auto;
-        background: url('/assets/images/ghost.png') no-repeat center;
         background-origin: content-box;
         background-size: contain;
     }
@@ -2133,9 +2132,7 @@ audio{
         width: 300px;
         height: 300px;
         margin: auto;
-        background: url(/assets/images/home_banner1.jpg);
         position: relative;
- 
         &::after{
             content: "";
             position: absolute;
@@ -2144,7 +2141,6 @@ audio{
             border: 1px solid white;
             transition: .3s;
             z-index: 2;
-           
         }
         &:hover::after{
             scale: .9;
