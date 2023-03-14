@@ -672,6 +672,8 @@ audio{
         overflow-y: auto;
         background-origin: content-box;
         background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center;
     }
 }
 
@@ -2140,7 +2142,7 @@ audio{
             height: 100%;
             border: 1px solid white;
             transition: .3s;
-            z-index: 2;
+          
         }
         &:hover::after{
             scale: .9;

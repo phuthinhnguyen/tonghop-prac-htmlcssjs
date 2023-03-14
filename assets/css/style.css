@@ -676,9 +676,10 @@ audio {
   height: 300px;
   -webkit-mask-image: linear-gradient(black, transparent);
   overflow-y: auto;
-  background: url("/assets/images/ghost.png") no-repeat center;
   background-origin: content-box;
   background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .pagination {
@@ -2675,7 +2676,6 @@ audio {
   width: 300px;
   height: 300px;
   margin: auto;
-  background: url(/assets/images/home_banner1.jpg);
   position: relative;
 }
 .template2-container .img::after {
@@ -2685,14 +2685,13 @@ audio {
   height: 100%;
   border: 1px solid white;
   transition: 0.3s;
-  z-index: 2;
 }
 .template2-container .img:hover::after {
   scale: 0.9;
   z-index: 2;
+  box-shadow: outset 0px -10px 137px 0px rgba(189, 15, 15, 0.44);
 }
 .template2-container .img:hover {
-  box-shadow: inset 0px -10px 137px 0px rgba(189, 15, 15, 0.44);
   z-index: 0;
 }
 
