@@ -1,0 +1,417 @@
+
+@mixin scrollbar ($width,$track-color,$thumb-color,$thumb-hover-color){
+    & ::-webkit-scrollbar {
+        width: $width;
+    }
+    & ::-webkit-scrollbar-track {
+        background: $track-color;
+    }
+    & ::-webkit-scrollbar-thumb {
+        background: $thumb-color;
+        border-radius: 5px;
+    }
+    & ::-webkit-scrollbar-thumb:hover {
+        background: $thumb-hover-color;
+    }
+}
+@mixin overlayitem1{
+    position: absolute;
+    bottom: 1%;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .4s ease;
+    z-index: 2;
+    user-select: none;
+}
+@mixin overlayitem2{
+    position: absolute;
+    right: 1%;
+    top: 0;
+    bottom: 0;
+    overflow: hidden;
+    width: 0;
+    margin: 5px 10px;
+    transition: .4s ease;
+    user-select: none;
+    z-index: 1;
+}
+@mixin overlayitem3{
+    position: absolute;
+    bottom: 1%;
+    overflow: hidden;
+    width: 100%;
+    height:0;
+    transition: .5s ease;
+    user-select: none;
+}
+@mixin addtocard{
+    color: black;
+    font-weight: 500;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    border-radius: 5px;
+    width: 90%;
+    padding: 10px;
+    background-color: white;
+    border: none;
+    transition: .4s;
+    &:hover{
+        color: white;
+        background-color: black;
+        cursor: pointer;
+    }
+}
+@mixin overlayitem2item{
+    div{
+        display: flex;
+        justify-content: right;
+        align-items: center;
+        width: 100%;
+        margin-top: 20px;
+        span{
+            display: none;
+            background-color: black;
+            color: #fff;
+            padding: 8px 10px;
+            font-size: 14px;
+            border-radius: 5px;
+            box-shadow:  2px 4px 5px grey;
+        }
+        span+i{
+            display: none;
+            font-size: 28px;
+            margin-left: -10px;
+            margin-right: 5px;
+            color: black;
+        }
+        a{
+            display: inline-block;
+            color: black;
+            text-align: center;
+            background-color: white;
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 10px;
+            transition: .5s;
+            &:hover{
+                color: white;
+                background-color: black;
+                cursor: pointer;
+            }
+        }
+        i{
+            font-size: 16px;
+            text-align: center;
+            display: inline-block;
+        }
+        &:hover span,&:hover span+i{
+            display: inline-block;
+        }
+    }
+}
+@mixin showoverlayitem{
+    &:hover .overlay-item1{
+        bottom: 0;
+        height: 30%;
+    }
+    &:hover .overlay-item2{
+        right: 0;
+        top:0;
+        width: 200px;
+    }
+    &:hover .overlay-item3{
+        bottom: 0;
+        height: 100%;
+    }
+}
+@mixin item-top{
+    position: relative;
+    min-width: 200px;
+    &:hover{
+        cursor: pointer;
+    }
+    img{
+        width: 100%;
+        height: auto;
+    }
+    .overlay-item1{
+        @include overlayitem1;
+        .addtocard{
+            @include addtocard;
+        }
+    }
+    .overlay-item2{
+        @include overlayitem2;
+        @include overlayitem2item;
+    }
+    .overlay-item3{
+        @include overlayitem3;
+    }
+    @include showoverlayitem;
+}
+@mixin item-center{
+    a{
+        font-weight: 450;
+        display: block;
+        margin-top: 20px;
+        transition: .5s;
+        &:hover{
+            color: $a-hover;
+        }
+    }
+    p{
+        display: inline-block;
+        margin-top: 10px;
+        &:first-of-type{
+            font-weight: 450;
+        }
+        &:last-of-type{
+            text-decoration: line-through;
+            margin-left: 10px;
+            color: rgb(179, 176, 176);
+            font-weight: 400;
+        }
+    }
+}
+@mixin item-bottom{
+    height: 70px;
+    margin-top: -35px;
+    .item-bottom-color{
+        height: 100%;
+        position: relative;
+        width: 27px;
+        display: inline-block;
+        margin-right: 5px;
+        .color{
+            position: absolute;
+            bottom: 0;
+            a{
+                width: 27px;
+                height: 27px;
+                display: inline-block;
+                border-radius: 50%; 
+                transition: .15s;
+                &:hover{
+                    border: 4px solid white;
+                    outline: 1px solid black;
+                }
+            }
+        }
+        .tooltip-text{
+            position: absolute;
+            bottom: 40%;
+            left: -100%;
+            height: 0;
+            min-width: 90px;
+            transition: .2s ease-in-out;
+            font-size: 15px;
+            overflow: hidden;
+            span{
+                display: block;
+                margin: 0;
+                padding: 3px;
+                background-color: black;
+                color: white;
+                font-size: 14px;
+                border-radius: 5px;
+                box-shadow:  2px 4px 5px grey;
+                text-align: center;
+            }
+            i{
+                position: absolute;
+                left: 40%;
+                top: 40%;
+            }
+        }
+        &:hover{
+            cursor: pointer;
+        }
+        &:hover .tooltip-text{
+            height: 70%;
+            bottom: 35%;
+        }
+    }
+}
+@mixin toolbardropdown{
+    .toolbar-dropdown-item1{
+        @include scrollbar(3px,#ffffff,black,#555);
+        p{
+            font-size: 17px;
+            font-weight: 500;
+        }
+        a{
+            display: inline-block;
+            transition: .3s;
+            margin-top: 20px;
+            &:last-of-type{
+                font-weight: 500;
+            }
+        }
+        span{
+            color: gray;
+        }
+        .toolbar-dropdown-item1-content{
+            max-height: 250px;
+            overflow-y: auto;
+        }
+    }
+    .toolbar-dropdown-item2{
+        p{
+            font-size: 17px;
+            font-weight: 500;
+        }
+        a{
+            display: inline-block;
+            width:42px;
+            height: 42px;
+            text-align: center;
+            border-radius: 5px;
+            border: 1px solid lightgray;
+            line-height: 40px;
+            font-size: 18px;
+            margin-right: 10px;
+            margin-bottom: 10px;
+            transition: .5s;
+            &:hover{
+                background-color: black;
+                color: white;
+            }
+        }
+    }
+    .toolbar-dropdown-item3{
+        p{
+            font-size: 17px;
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
+        .item-bottom{
+            @include item-bottom;
+            .item-bottom-color{
+                margin-right: 10px;
+                margin-top: -20px;
+                .color{
+                    a{
+                        width: 32px;
+                        height: 32px;
+                    }
+                }
+            }
+        }
+    }
+    .toolbar-dropdown-item4{
+        p{
+            font-size: 17px;
+            font-weight: 500;
+        }
+        input{
+            width: 80%;
+        }
+        div{
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: -10px;
+        }
+    }
+    .toolbar-dropdown-item5{
+        p{
+            font-size: 17px;
+            font-weight: 500;
+        }
+        a{
+            display: inline-block;
+            margin-top: 10px;
+            margin-left: 10px;
+            &:last-of-type{
+                margin-left: 0;
+                font-weight: 500;
+            }
+        }
+    }
+}
+@mixin breadcrumb{
+    text-align: center;
+    h1{
+        font-weight: 400;
+        font-size: 40px; 
+        color: black;
+    }
+    div{
+        display: inline-block;
+        ol{
+            li{
+                a{
+                    color: black;
+                    text-decoration: none;
+                }
+            }
+        }
+        a:hover{
+            text-decoration: underline;
+        }
+    }
+}
+@mixin gradientcircle($percent){
+    //1percent = 3.6deg
+    background-image: conic-gradient(#908ced 0%, #b56fe8 $percent*1%, rgb(50, 50, 50)  ($percent*3.6+deg) ,rgb(50, 50, 50) 360deg);
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .black-circle{
+        display: inline-block;
+        background-color: black;
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        color: white;
+        text-align: center;
+        line-height: 100px;
+    }
+}
+@mixin menuslideitem{
+    width: 50px;
+    overflow: hidden;
+    height: 50px;
+    line-height: 30px;
+    text-align: left;
+    padding: 10px;
+    transition: .5s;
+    background-color: rgb(66,103,178);
+    border-top-right-radius: 80%;
+    border-bottom-right-radius: 80%;
+        i{
+            color: white;
+            margin-left: 5px;
+        }
+        div{
+            display: none;
+            margin-left: 20px;
+            color: white;
+            font-weight: 500;
+            width: 0;
+        }
+    &:hover{
+        cursor: pointer;
+        width: 120px;
+        border-top-right-radius: 4%;
+        border-bottom-right-radius: 4%;
+        div{
+            display: inline-block;
+        }
+    }
+}
+
