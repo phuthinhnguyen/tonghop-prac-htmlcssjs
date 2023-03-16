@@ -279,7 +279,7 @@
 
 		<!-- audio -->
 		<audio controls autoplay>
-		<source src="assets/audios/audio1.mp3" type="audio/mp3">
+		<source src="aassets/audios/audio1.mp3" type="audio/mp3">
 		</audio>
 
 		<!-- clearfix -->
@@ -1724,6 +1724,92 @@
 			};
 		</script>	
 
+		<!-- animate number -->
+		<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(assets/images/bg_4.jpg);" data-stellar-background-ratio="0.5">
+			<div class="container" style="height: 150px;">
+				<div class="counter-wrap ftco-animate fadeInUp ftco-animated item">
+						<div class="text">
+							<strong class="number" data-number="18">18</strong>
+							<span>Years of Experienced</span>
+						</div>
+				</div>
+				<div class="counter-wrap ftco-animate fadeInUp ftco-animated item">
+						<div class="text">
+							<strong class="number" data-number="15000">15,000</strong>
+							<span>Happy Customers</span>
+						</div>
+				</div>
+				<div class="counter-wrap ftco-animate fadeInUp ftco-animated item">
+						<div class="text">
+							<strong class="number" data-number="100">100</strong>
+							<span>Menus</span>
+						</div>
+				</div>
+				<div class="counter-wrap ftco-animate fadeInUp ftco-animated item">
+						<div class="text">
+							<strong class="number" data-number="20">20</strong>
+							<span>Staffs</span>
+						</div>
+				</div>
+			</div>
+		</section>
+		<script src="assets/js/jquery.animateNumber.min.js"></script>
+		<script src="assets/js/jquery.waypoints.min.js"></script>
+		<script>
+			var counter = function() {
+				$('#section-counter').waypoint( function( direction ) {
+					if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
+						var comma_separator_number_step = $.animateNumber.numberStepFactories.separator(',')
+						$('.number').each(function(){
+							var $this = $(this),
+								num = $this.data('number');
+								console.log(num);
+							$this.animateNumber(
+							{
+								number: num,
+								numberStep: comma_separator_number_step
+							}, 7000
+							);
+						});
+						
+					}
+
+				} , { offset: '95%' } );
+			}
+			counter();
+
+			var contentWayPoint = function() {
+				var i = 0;
+				$('.ftco-animate').waypoint( function( direction ) {
+					if( direction === 'down' && !$(this.element).hasClass('ftco-animated') ) {
+						i++;
+						$(this.element).addClass('item-animate');
+						setTimeout(function(){
+							$('body .ftco-animate.item-animate').each(function(k){
+								var el = $(this);
+								setTimeout( function () {
+									var effect = el.data('animate-effect');
+									if ( effect === 'fadeIn') {
+										el.addClass('fadeIn ftco-animated');
+									} else if ( effect === 'fadeInLeft') {
+										el.addClass('fadeInLeft ftco-animated');
+									} else if ( effect === 'fadeInRight') {
+										el.addClass('fadeInRight ftco-animated');
+									} else {
+										el.addClass('fadeInUp ftco-animated');
+									}
+									el.removeClass('item-animate');
+								},  k * 50, 'easeInOutExpo' );
+							});
+					
+						}, 100);
+					}
+				} , { offset: '95%' } );
+			};
+			contentWayPoint();
+		</script>
+
+
 		<!-- load content when scrolling sdf-->
 		<div class="load-when-scrolling">
 			<ul>
@@ -1732,7 +1818,6 @@
 				<li class="ftco-animate fadeInUp ftco-animated"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
 			</ul>
 		</div>
-		
 	</div>
 	
 </body>

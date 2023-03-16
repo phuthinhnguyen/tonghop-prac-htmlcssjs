@@ -2784,6 +2784,43 @@ audio {
   max-width: 392px;
 }
 
+#section-counter {
+  position: relative;
+  z-index: -1;
+  margin-top: 40px;
+}
+
+.ftco-counter {
+  padding: 6em 0;
+}
+.ftco-counter .container {
+  display: flex;
+  -moz-column-gap: 50px;
+       column-gap: 50px;
+  justify-content: space-around;
+  align-items: center;
+}
+.ftco-counter .container .item .text {
+  text-align: center;
+}
+.ftco-counter .container .item .text strong.number {
+  font-weight: 500;
+  font-size: 40px;
+  color: #000000;
+  display: block;
+}
+.ftco-counter .container .item .text span {
+  display: block;
+  font-size: 16px;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.img {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
 .load-when-scrolling {
   margin-top: 40px;
   padding: 30px;
