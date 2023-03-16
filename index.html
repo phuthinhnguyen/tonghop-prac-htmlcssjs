@@ -1725,7 +1725,7 @@
 		</script>	
 
 		<!-- animate number -->
-		<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(assets/images/bg_4.jpg);" data-stellar-background-ratio="0.5">
+		<section class="ftco-section ftco-counter" id="section-counter" style="background-image: url(assets/images/bg_4.jpg);" data-stellar-background-ratio="0.5">
 			<div class="container" style="height: 150px;">
 				<div class="counter-wrap ftco-animate fadeInUp ftco-animated item">
 						<div class="text">
@@ -1763,7 +1763,6 @@
 						$('.number').each(function(){
 							var $this = $(this),
 								num = $this.data('number');
-								console.log(num);
 							$this.animateNumber(
 							{
 								number: num,
@@ -1812,12 +1811,16 @@
 
 		<!-- load content when scrolling sdf-->
 		<div class="load-when-scrolling">
-			<ul>
-				<li class="ftco-animate fadeInUp ftco-animated"><a href="#"><i class="fa-brands fa-twitter"></i></a></li>
-				<li class="ftco-animate fadeInUp ftco-animated"><a href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
-				<li class="ftco-animate fadeInUp ftco-animated"><a href="#"><i class="fa-brands fa-instagram"></i></a></li>
-			</ul>
-		</div>
+			<div class="scroll-element">Content goes here...</div>
+		<script>
+			$(window).on('scroll' , function(){
+    			scroll_pos = $(window).scrollTop() + $(window).height();
+    			element_pos = $(".scroll-element").offset().top + $(".scroll-element").height() ;
+				if (scroll_pos > element_pos) {
+					$(".scroll-element").addClass('animate');
+				};
+			})
+		</script>
 	</div>
 	
 </body>

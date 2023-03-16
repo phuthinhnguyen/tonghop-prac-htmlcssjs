@@ -2256,6 +2256,9 @@ audio{
     position: relative;
     z-index: -1; 
     margin-top: 40px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
 }
 .ftco-counter {
     padding: 6em 0;
@@ -2283,11 +2286,7 @@ audio{
     }
    
 }
-.img{
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-}
+
 
 
 //CSS load content when scrolling
@@ -2295,61 +2294,23 @@ audio{
     margin-top: 40px;
     padding: 30px;
     background-color: black;
-    ul{
-        @keyframes fadeInUp{
-            0% {
-                opacity: 0;
-                visibility: hidden;
-                -webkit-transform: translate3d(0, 40px, 0);
-                transform: translate3d(0, 40px, 0);
-            }
-        
-            to {
-                visibility: visible;
-                opacity: 1;
-                -webkit-transform: none;
-                transform: none;
-            }
-        }
-        .ftco-animate {
+    color: red;
+    @keyframes fadeinup {
+        0% {
             opacity: 0;
             visibility: hidden;
+            transform: translate3d(0, 80px, 0);
         }
-        .fadeInUp{
-            animation-name: fadeInUp;
-        }
-        .ftco-animated {
-            -webkit-animation-duration: .5s;
-            animation-duration: 4s;
-            -webkit-animation-fill-mode: both;
-            animation-fill-mode: both;
-        }
-        li{
-            list-style: none;
-            margin: 0 10px 0 0;
-            display: inline-block;
-            a{
-                height: 40px;
-                width: 40px;
-                display: block;
-                float: left;
-                background: rgba(255, 255, 255, 0.05);
-                border-radius: 50%;
-                position: relative;
-                i{
-                    color: #fff;
-                    position: absolute;
-                    font-size: 16px;
-                    top: 50%;
-                    left: 50%;
-                    -webkit-transform: translate(-50%, -50%);
-                    -ms-transform: translate(-50%, -50%);
-                    transform: translate(-50%, -50%);
-                }
-             
-            }
+        100% {
+            visibility: visible;
+            opacity: 1;
+            transform: none;
         }
     }
+    .scroll-element.animate{
+            animation: fadeinup 3s;
+    }
+   
 }
 
 
