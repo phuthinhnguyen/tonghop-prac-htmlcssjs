@@ -1812,15 +1812,99 @@
 		<!-- load content when scrolling sdf-->
 		<div class="load-when-scrolling">
 			<div class="scroll-element">Content goes here...</div>
-		<script>
-			$(window).on('scroll' , function(){
-    			scroll_pos = $(window).scrollTop() + $(window).height();
-    			element_pos = $(".scroll-element").offset().top + $(".scroll-element").height() ;
-				if (scroll_pos > element_pos) {
-					$(".scroll-element").addClass('animate');
-				};
-			})
-		</script>
+			<script>
+				$(window).on('scroll' , function(){
+					scroll_pos = $(window).scrollTop() + $(window).height();
+					element_pos = $(".scroll-element").offset().top + $(".scroll-element").height() ;
+					if (scroll_pos > element_pos) {
+						$(".scroll-element").addClass('animate');
+					};
+				})
+			</script>
+		</div>
+		<!-- carousel -->
+		<div class="content-whatpeoplesayaboutus-bottom">
+            <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <div class="carousel-item-wrap">
+                        <div class="item">
+                            <div>
+                                <img src="assets/images/Ellipse-1.svg" alt="">
+                                <img src="assets/images/quote.svg" alt="" class="quote">
+                            </div>
+                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                            <a></a>
+                            <h6>Jan Stiedemann</h6>
+                            <p>Global Applications Representative</p>
+                        </div>
+                        <div class="item">
+                            <div>
+                                <img src="assets/images/Ellipse-2.svg" alt="">
+                                <img src="assets/images/quote.svg" alt="" class="quote">
+                            </div>
+                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                            <a></a>
+                            <h6>Jan Stiedemann</h6>
+                            <p>Global Applications Representative</p>
+                        </div>
+                        <div class="item">
+                            <div>
+                                <img src="assets/images/Ellipse-3.svg" alt="">
+                                <img src="assets/images/quote.svg" alt="" class="quote">
+                            </div>
+                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                            <a></a>
+                            <h6>Jan Stiedemann</h6>
+                            <p>Global Applications Representative</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="carousel-item">
+                    <div class="carousel-item-wrap">
+                        <div class="item">
+                            <div>
+                                <img src="assets/images/Ellipse-1.svg" alt="">
+                                <img src="assets/images/quote.svg" alt="" class="quote">
+                            </div>
+                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                            <a></a>
+                            <h6>Jan Stiedemann</h6>
+                            <p>Global Applications Representative</p>
+                        </div>
+                        <div class="item">
+                            <div>
+                                <img src="assets/images/Ellipse-2.svg" alt="">
+                                <img src="assets/images/quote.svg" alt="" class="quote">
+                            </div>
+                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                            <a></a>
+                            <h6>Jan Stiedemann</h6>
+                            <p>Global Applications Representative</p>
+                        </div>
+                        <div class="item">
+                            <div>
+                                <img src="assets/images/Ellipse-3.svg" alt="">
+                                <img src="assets/images/quote.svg" alt="" class="quote">
+                            </div>
+                            <p>Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.</p>
+                            <a></a>
+                            <h6>Jan Stiedemann</h6>
+                            <p>Global Applications Representative</p>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"><img src="assets/images/arrowleft.svg" alt=""></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"><img src="assets/images/arrowright.svg" alt=""></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
+        </div>
 	</div>
 	
 </body>

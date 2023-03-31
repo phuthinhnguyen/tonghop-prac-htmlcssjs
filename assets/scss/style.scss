@@ -2313,6 +2313,79 @@ audio{
    
 }
 
-
+// carousel
+.content-whatpeoplesayaboutus-bottom{
+    margin-top: 80px;
+    .carousel-item-wrap{
+        display: flex;
+        justify-content: space-evenly;
+        .item{
+            max-width: 304px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0px 10px 30px 0px rgba(153,153,153,0.2);
+            div{
+                width: 129px;
+                height: 129px;
+                position: relative;
+                margin: auto;
+                img{
+                    width: 100%;
+                    height: 100%;
+                    margin: auto;
+                }
+                .quote{
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    width: 51px;
+                    height: 51px;
+                }
+            }
+            
+            p{
+                @include font($fontInter);
+                &:first-of-type{
+                    font-size: small;
+                    color: $dark-02;
+                    margin-top: 20px;
+                }
+                &:last-of-type{
+                    font-size: small;
+                    color: $dark-03;
+                    margin-top: 20px;
+                }
+            }
+            a{
+                width: 9px;
+                height: 9px;
+                background-color: $dark-01;
+                margin: auto;
+                border-radius: 50%;
+            }
+            h6{
+                @include font($fontAnybody);
+                font-weight: bold;
+                color: $dark-blue-01;
+                margin-top: 20px;
+            }
+        }
+    }
+    .carousel-nav{
+        position: absolute;
+        color: $primary-green;
+        border-radius: 50%;
+        background-color: $dark-blue-01;
+    }
+    .carousel-nav-left{
+        left: 0;
+    }
+    .carousel-nav-right{
+        right: 0;
+    }
+}
 
 
