@@ -2319,6 +2319,7 @@ audio{
     .carousel-item-wrap{
         display: flex;
         justify-content: space-evenly;
+        flex-direction: row;
         .item{
             max-width: 304px;
             display: flex;
@@ -2347,38 +2348,38 @@ audio{
             }
             
             p{
-                @include font($fontInter);
+      
                 &:first-of-type{
                     font-size: small;
-                    color: $dark-02;
+                    color: black;
                     margin-top: 20px;
                 }
                 &:last-of-type{
                     font-size: small;
-                    color: $dark-03;
+                    color: black;
                     margin-top: 20px;
                 }
             }
             a{
                 width: 9px;
                 height: 9px;
-                background-color: $dark-01;
+                background-color: black;
                 margin: auto;
                 border-radius: 50%;
             }
             h6{
-                @include font($fontAnybody);
+              
                 font-weight: bold;
-                color: $dark-blue-01;
+                color: black;
                 margin-top: 20px;
             }
         }
     }
     .carousel-nav{
         position: absolute;
-        color: $primary-green;
+        color: green;
         border-radius: 50%;
-        background-color: $dark-blue-01;
+        background-color: black;
     }
     .carousel-nav-left{
         left: 0;
