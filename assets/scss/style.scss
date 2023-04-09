@@ -2389,4 +2389,31 @@ audio{
     }
 }
 
+// use overlay to darken image
+.overlay-item{
+    margin: auto;
+    margin-top: 40px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    width: 300px;
+    height: 300px;
+    padding-top: 40px;
+    padding-left: 40px;
+    position: relative;
+    .overlay{
+        position: absolute;
+        top: 0;
+        left: 0; 
+        right: 0;
+        bottom: 0;
+        background-color: rgba(0, 0, 0, 0.5); 
+    }
+    h2,h4{
+        filter: brightness(1);
+    }
+
+}
+
 
