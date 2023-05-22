@@ -2416,4 +2416,235 @@ audio{
 
 }
 
+// multi languages
+[lang=en] [lang=vi],
+[lang=en] [lang=fr],
+[lang=vi] [lang=en],
+[lang=vi] [lang=fr],
+[lang=fr] [lang=en],
+[lang=fr] [lang=vi]
+/* [lang=fr-FR] [lang=en-GB],
+[lang=fr-FR] [lang=ja-JP],
+[lang=ja-JP] [lang=en-GB],
+[lang=ja-JP] [lang=fr-FR] */
+{
+    display: none !important;
+}
+.multi-languages{
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    padding: 50px;
+    p{
+        color: white;
+        font-size: 25px;
+        margin-bottom: 40px;
+    }
+    a{
+        color: white;
+        padding: 15px;
+        border: 1px solid white;
+        cursor: pointer;
+        &:hover{
+            background-color: white;
+            color: black;
+        }
+    }
+}
 
+
+// include snippet to multi pages
+.include-snippet{
+    width: 100%;
+    padding: 40px;
+    nav{
+        position: sticky;
+        top: 0;
+        z-index: 2;
+        color: black;
+        max-width: 1400px;
+        margin: auto;
+        background-color: #FAFAFC;
+        .row{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            height: 90px;
+            padding: 30px;
+            .left{
+                flex: 1;
+                img{
+                    width: 105px;
+                    height: 66px;
+                }
+            }
+            .center{
+                flex: 7;
+                height: 56px;
+                display: flex;
+                align-items: center;
+                justify-content: flex-end;
+                ul{
+                    list-style-type: none;
+                    padding: 0;
+                    margin: 0;
+                    li{
+                        float: left;
+                        margin-left: 60px;
+                        position: relative;
+                        a{
+                            display: flex;
+                            align-items: center;
+                            text-decoration: none;
+                            color: black;
+                            h6{
+                                margin: 0;
+                                padding: 0;
+                                font-weight: bold;
+                                img{
+                                    width: 14px;
+                                    height: 7px;
+                                    margin-left: 22px;
+                                    color: green;
+                                }
+                            }
+                            &:hover{
+                                color: green;
+                            } 
+                        }
+                        .menu-dropdown
+                        {
+                            display: none;
+                            position: absolute;
+                            background-color: white;
+                            padding: 20px;
+                            top:20px;
+                            left: -20px;
+                            border-bottom: 5px solid green;
+                            .menu-dropdown-item
+                            {
+                                .menu-dropdown-item-content{
+                                    cursor: pointer;
+                                    a{
+                                        .img-language{
+                                            width: 20px;
+                                            height: 20px;
+                                            margin-right: 10px;
+                                           
+                                        }
+                                        padding: 5px;
+                                        font-size: small;
+                                        &:hover{
+                                            background-color: black;
+                                            font-weight: bold;
+                                            color: black;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                        &:hover .menu-dropdown{
+                            display: flex;
+                            flex-direction: row;
+                            column-gap: 20px;
+                            animation: nav-dropdown-in 0.6s;
+                        }
+                    }
+                }
+            }
+            .right{
+                display: none;
+                img{
+                    width: 24px;
+                    height: 16px;
+                    margin-left: 16px;
+                    &:hover{
+                        cursor: pointer;
+                    }
+                }
+            }
+            .menu{
+                display: none;
+                a{
+                    img{
+                        width: 24px;
+                        height: 24px;
+                    }
+                }
+            }
+            .offcanvas{
+                padding: 0;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                width: 100%;
+                .offcanvas-header{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    row-gap: 35px;
+                    padding: 20px 40px;
+                    img{
+                        width: 66px;
+                        height: 41px;
+                    }
+                    div{
+                        img{
+                            width: 30px;
+                            height: 30px;
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+                .offcanvas-header-bottom{
+                    height: 404px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    align-items: center;
+                    a{
+                        display: block;
+                        text-decoration: none;
+                        &:first-of-type{
+                            color: green;
+                        }
+                        h5{
+                            transition: 0.3s;
+                            color: black;
+                            font-weight: bold;
+                        }
+                        &:hover{
+                            h5{
+                                color: green;
+                            }
+                        }
+                    }
+                    .language{
+                        width: 128px;
+                        height: 44px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        column-gap: 16px;
+                        border-radius: 0;
+                        img{
+                            width: 36px;
+                            height: 24px;
+                            border-radius: 0;
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
+                        
+                    }
+                }
+            }
+        }
+      
+    }
+    
+}

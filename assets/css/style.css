@@ -624,8 +624,7 @@ audio {
   width: 100%;
   height: auto;
   transition: 0.5s ease;
-  -webkit-backface-visibility: hidden;
-          backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 .imgfadeinaboxcontainer-wrap .imgfadeinaboxcontainer .middle {
   transition: 0.5s ease;
@@ -2933,4 +2932,218 @@ audio {
 }
 .overlay-item h2, .overlay-item h4 {
   filter: brightness(1);
+}
+
+[lang=en] [lang=vi],
+[lang=en] [lang=fr],
+[lang=vi] [lang=en],
+[lang=vi] [lang=fr],
+[lang=fr] [lang=en],
+[lang=fr] [lang=vi] {
+  display: none !important;
+}
+
+.multi-languages {
+  width: 100%;
+  text-align: center;
+  background-color: black;
+  padding: 50px;
+}
+.multi-languages p {
+  color: white;
+  font-size: 25px;
+  margin-bottom: 40px;
+}
+.multi-languages a {
+  color: white;
+  padding: 15px;
+  border: 1px solid white;
+  cursor: pointer;
+}
+.multi-languages a:hover {
+  background-color: white;
+  color: black;
+}
+
+.include-snippet {
+  width: 100%;
+  padding: 40px;
+}
+.include-snippet nav {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  color: black;
+  max-width: 1400px;
+  margin: auto;
+  background-color: #FAFAFC;
+}
+.include-snippet nav .row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 90px;
+  padding: 30px;
+}
+.include-snippet nav .row .left {
+  flex: 1;
+}
+.include-snippet nav .row .left img {
+  width: 105px;
+  height: 66px;
+}
+.include-snippet nav .row .center {
+  flex: 7;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.include-snippet nav .row .center ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+.include-snippet nav .row .center ul li {
+  float: left;
+  margin-left: 60px;
+  position: relative;
+}
+.include-snippet nav .row .center ul li a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: black;
+}
+.include-snippet nav .row .center ul li a h6 {
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+}
+.include-snippet nav .row .center ul li a h6 img {
+  width: 14px;
+  height: 7px;
+  margin-left: 22px;
+  color: green;
+}
+.include-snippet nav .row .center ul li a:hover {
+  color: green;
+}
+.include-snippet nav .row .center ul li .menu-dropdown {
+  display: none;
+  position: absolute;
+  background-color: white;
+  padding: 20px;
+  top: 20px;
+  left: -20px;
+  border-bottom: 5px solid green;
+}
+.include-snippet nav .row .center ul li .menu-dropdown .menu-dropdown-item .menu-dropdown-item-content {
+  cursor: pointer;
+}
+.include-snippet nav .row .center ul li .menu-dropdown .menu-dropdown-item .menu-dropdown-item-content a {
+  padding: 5px;
+  font-size: small;
+}
+.include-snippet nav .row .center ul li .menu-dropdown .menu-dropdown-item .menu-dropdown-item-content a .img-language {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+}
+.include-snippet nav .row .center ul li .menu-dropdown .menu-dropdown-item .menu-dropdown-item-content a:hover {
+  background-color: black;
+  font-weight: bold;
+  color: black;
+}
+.include-snippet nav .row .center ul li:hover .menu-dropdown {
+  display: flex;
+  flex-direction: row;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+  animation: nav-dropdown-in 0.6s;
+}
+.include-snippet nav .row .right {
+  display: none;
+}
+.include-snippet nav .row .right img {
+  width: 24px;
+  height: 16px;
+  margin-left: 16px;
+}
+.include-snippet nav .row .right img:hover {
+  cursor: pointer;
+}
+.include-snippet nav .row .menu {
+  display: none;
+}
+.include-snippet nav .row .menu a img {
+  width: 24px;
+  height: 24px;
+}
+.include-snippet nav .row .offcanvas {
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.include-snippet nav .row .offcanvas .offcanvas-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  row-gap: 35px;
+  padding: 20px 40px;
+}
+.include-snippet nav .row .offcanvas .offcanvas-header img {
+  width: 66px;
+  height: 41px;
+}
+.include-snippet nav .row .offcanvas .offcanvas-header div img {
+  width: 30px;
+  height: 30px;
+}
+.include-snippet nav .row .offcanvas .offcanvas-header div img:hover {
+  cursor: pointer;
+}
+.include-snippet nav .row .offcanvas .offcanvas-header-bottom {
+  height: 404px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.include-snippet nav .row .offcanvas .offcanvas-header-bottom a {
+  display: block;
+  text-decoration: none;
+}
+.include-snippet nav .row .offcanvas .offcanvas-header-bottom a:first-of-type {
+  color: green;
+}
+.include-snippet nav .row .offcanvas .offcanvas-header-bottom a h5 {
+  transition: 0.3s;
+  color: black;
+  font-weight: bold;
+}
+.include-snippet nav .row .offcanvas .offcanvas-header-bottom a:hover h5 {
+  color: green;
+}
+.include-snippet nav .row .offcanvas .offcanvas-header-bottom .language {
+  width: 128px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  -moz-column-gap: 16px;
+       column-gap: 16px;
+  border-radius: 0;
+}
+.include-snippet nav .row .offcanvas .offcanvas-header-bottom .language img {
+  width: 36px;
+  height: 24px;
+  border-radius: 0;
+}
+.include-snippet nav .row .offcanvas .offcanvas-header-bottom .language img:hover {
+  cursor: pointer;
 }
