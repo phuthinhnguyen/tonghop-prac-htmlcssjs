@@ -2648,3 +2648,17 @@ audio{
     }
     
 }
+// advanced table
+.zigzag {
+    border-collapse:separate;
+    border-spacing:.25em 1em;
+    tbody tr:nth-child(odd) {
+      transform:rotate(0deg);
+      background-color: green;
+    }
+    thead tr,
+    tbody tr:nth-child(even) {
+      transform:rotate(-2deg);
+      background-color: #DDD3D3;
+    }
+  }

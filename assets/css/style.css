@@ -3147,3 +3147,17 @@ audio {
 .include-snippet nav .row .offcanvas .offcanvas-header-bottom .language img:hover {
   cursor: pointer;
 }
+
+.zigzag {
+  border-collapse: separate;
+  border-spacing: 0.25em 1em;
+}
+.zigzag tbody tr:nth-child(odd) {
+  transform: rotate(0deg);
+  background-color: green;
+}
+.zigzag thead tr,
+.zigzag tbody tr:nth-child(even) {
+  transform: rotate(-2deg);
+  background-color: #DDD3D3;
+}
