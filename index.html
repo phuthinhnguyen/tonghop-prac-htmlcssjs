@@ -26,6 +26,7 @@
 	<script src="assets/js/language.js"></script>
 	<script src="assets/js/HTMLImporter.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+	<script src="https://smtpjs.com/v3/smtp.js"></script>
 </head>
 
 <body>
@@ -1978,8 +1979,95 @@
 			  </tr>
 			</tbody>
 		</table>
-	</div>
 
+		<!-- send-email -->
+		<div class="contact" id="contact">
+			<h4>Our Contacts</h4>
+			<h1>Connect with us</h1>
+			<div class="contact-content">
+				<div class="item1">
+					<div class="item">
+						<img src="assets/images/ourcontact1.svg" alt="">
+						<div class="text">
+							<h5 >HEAD OFFICE</h5>
+							<h6 >40 Hung Gia 2, Tan Phong Ward, District 7, Ho Chi Minh City</h6>
+						</div>
+					</div> 
+					<div class="item">
+						<img src="assets/images/ourcontact2.svg" alt="">
+						<div class="text">
+							<h5 >CALL US</h5>
+							<h6 >Tel/Whatsapp/Zalo: (+84) 906390371 - (+84) 939849827</h6>
+						</div>
+					</div>
+					<div class="item">
+						<img src="assets/images/ourcontact3.svg" alt="">
+						<div class="text">
+							<h5 >EMAIL US</h5>
+							<h6  id="nores">contact@opencompanyinvietnam.com</h6>
+							<h6  id="res">contact@opencompanyinviet nam.com</h6>
+						</div>
+					</div>   
+				</div>
+				<div class="item2">
+					<div class="content-getintouch-center">
+						<div class="getintouch-item1">
+							<input type="text" placeholder="Enter your Name" id="contact-name">
+							<input type="text" placeholder="Enter your Email" id="contact-email">
+						</div>
+						<div class="getintouch-item2">
+							<input type="text" placeholder="Enter your Subject" id="contact-subject">
+						</div>
+						<div class="getintouch-item3">
+							<textarea name="" cols="30" rows="4" placeholder="Enter your Message..." id="contact-message"></textarea>
+						</div>
+					</div>
+					<div class="content-getintouch-bottom">
+						<button onclick="submit(); return false">Submit</button>
+					</div>
+				</div>
+				<script>
+					function submit() {
+						var name = document.getElementById("contact-name");
+						var email = document.getElementById("contact-email");
+						var subject = document.getElementById("contact-subject");
+						var message = document.getElementById("contact-message");
+						Email.send({
+							Host : "smtp.elasticemail.com",
+							Username : "phuthinhnguyen1101@gmail.com",
+							Password : "D96B9CC46BD97B138DCF21F8F5B78F2FED08",
+							To : 'phuthinhnguyen1101@gmail.com',
+							From : "phuthinhnguyen1101@gmail.com",
+							Subject : subject.value,
+							Body : `[From: ${name.value}, ${email.value}]<br>${message.value}`
+						}).then(message=>{
+							if (message=="OK"){
+								$('.toast').toast("show")
+							}
+						})
+						name.value="";
+						email.value="";
+						subject.value="";
+						message.value="";
+					}
+				</script>
+			</div>
+		</div>
+		<!-- toast -->
+		<div aria-live="polite" aria-atomic="true" class="d-flex justify-content-center align-items-center toast-container-res" style="position: fixed;top: 50%;right: 50%;transform: translate(50%,-50%);">
+			<div class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-delay="1000">
+			  <div class="toast-header d-flex justify-content-between" style="background-color: #CF7976;">
+				<div>
+					<img src="assets/images/logo.png" class="rounded mr-2" alt="..." style="width:20px;height: 20px;margin-right: 5px;">
+					<strong class="mr-auto">H.S Company</strong>
+				</div>
+				<button type="button" class="btn-close ml-2 mb-1" data-bs-dismiss="toast"></button>
+			  </div>
+			  <div class="toast-body">Your e-mail has been sent.</div>
+			</div>
+		</div>
+	</div>
+	
 		
 </body>
 	
