@@ -2028,13 +2028,36 @@ audio{
 
 //CSS carousel
 .owl-carousel-container{
-    margin-top: 40px;
-    background-color: black;
+    max-width: 100%;
+    margin: auto;
+    padding: 0 50px;
+    text-align: center;
+    @include font($fontCourgette);
+    color: $primary-green;
+    h4{
+        font-size: 30px;
+        margin-bottom: 20px;    
+    }
+    h1{
+        margin-bottom: 40px;
+        color: black;
+        font-size: 40px;
+        font-weight: 600;
+    }
     .owl-carousel{
-        padding: 30px 70px;
+        padding: 70px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
         .item{
+            // width: 250px;
+            height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             img{
-                width: 50%;
+                width: 100%;
+                max-width: 200px;
                 height: auto;
                 filter: grayscale(100%);
                 user-select: none;
@@ -2046,6 +2069,7 @@ audio{
         }
     }
 }
+
 
 //CSS template 1
 .template1-container{

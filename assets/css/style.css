@@ -2571,14 +2571,38 @@ audio {
 }
 
 .owl-carousel-container {
-  margin-top: 40px;
-  background-color: black;
+  max-width: 100%;
+  margin: auto;
+  padding: 0 50px;
+  text-align: center;
+  font-family: "Courgette";
+  color: #CF7976;
+}
+.owl-carousel-container h4 {
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+.owl-carousel-container h1 {
+  margin-bottom: 40px;
+  color: black;
+  font-size: 40px;
+  font-weight: 600;
 }
 .owl-carousel-container .owl-carousel {
-  padding: 30px 70px;
+  padding: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.owl-carousel-container .owl-carousel .item {
+  height: 250px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .owl-carousel-container .owl-carousel .item img {
-  width: 50%;
+  width: 100%;
+  max-width: 200px;
   height: auto;
   filter: grayscale(100%);
   -webkit-user-select: none;
