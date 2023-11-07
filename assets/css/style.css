@@ -3380,3 +3380,76 @@ audio {
   background-color: #696969;
   color: white;
 }
+
+.ppj-point {
+  display: grid;
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));
+  padding: 40px 30px;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+  row-gap: 25px;
+  margin-top: 18px;
+  width: 100%;
+  background-color: black;
+}
+.ppj-point .ppj-point-item {
+  display: flex;
+  -moz-column-gap: 32px;
+       column-gap: 32px;
+  padding: 24px 14px;
+  background-color: #fff;
+  border-radius: 14px;
+  min-width: 490px;
+}
+.ppj-point .ppj-point-item .ppj-point-item-left img {
+  width: 82px;
+  height: 77px;
+}
+.ppj-point .ppj-point-item .ppj-point-item-right {
+  width: 85%;
+}
+.ppj-point .ppj-point-item .ppj-point-item-right h1 {
+  color: #20A049;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 800;
+  line-height: 37px;
+  margin-top: 15px;
+}
+.ppj-point .ppj-point-item .ppj-point-item-right img {
+  width: 14px;
+  height: 14px;
+  margin-bottom: 20px;
+}
+.ppj-point .ppj-point-item .ppj-point-item-right .title {
+  color: #323338;
+  font-size: 18px;
+  text-align: center;
+  font-weight: 800;
+  line-height: 18px;
+}
+.ppj-point .ppj-point-item .ppj-point-item-right .unit {
+  color: #BBBBBB;
+  margin-left: 5px;
+  font-weight: 800;
+  font-size: 16px;
+}
+.ppj-point .ppj-point-item .ppj-point-item-right .ppj-point-item-right-bottom {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 1600px) {
+  .ppj-point {
+    grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));
+  }
+}
+@media screen and (max-width: 1080px) {
+  .ppj-point {
+    grid-template-columns: repeat(auto-fit, minmax(99%, 1fr));
+  }
+}

@@ -2882,3 +2882,91 @@ audio{
 	background-color: #696969;
 	color: white;
 }
+
+// responsive %width item grid
+.ppj-point {
+    display: grid;
+    // display: flex;
+    align-items: center;
+    justify-content: center;
+    // grid-template-columns: auto auto auto;
+    grid-template-columns: repeat(auto-fit, minmax(30%, 1fr));;
+    // flex-wrap: wrap;
+    padding: 40px 30px;
+    column-gap: 32px;
+    row-gap: 25px;
+    margin-top: 18px;
+    width: 100%;
+    background-color: black;
+    .ppj-point-item {
+        // width: 30%;
+        display: flex;
+        column-gap: 32px;
+        padding: 24px 14px;
+        // padding: 20px;
+        background-color: #fff;
+        border-radius: 14px;
+        min-width: 490px;
+        .ppj-point-item-left {
+
+            img {
+                width: 82px;
+                height: 77px;
+            }
+        }
+
+        .ppj-point-item-right {
+            width: 85%;
+
+            h1 {
+                color: #20A049;
+                text-align: center;
+                font-size: 32px;
+                font-weight: 800;
+                line-height: 37px;
+                margin-top: 15px;
+            }
+
+            img {
+                width: 14px;
+                height: 14px;
+                // margin-left: 80px;
+                margin-bottom: 20px;
+            }
+
+            .title {
+                color: #323338;
+                font-size: 18px;
+                text-align: center;
+                font-weight: 800;
+                line-height: 18px;
+            }
+
+            .unit {
+                color: #BBBBBB;
+                margin-left: 5px;
+                font-weight: 800;
+                font-size: 16px;
+            }
+
+            .ppj-point-item-right-bottom {
+                // width: 200px;
+                width: 100%;
+                display: flex;
+                align-items: flex-end;
+                justify-content: space-between;
+            }
+
+        }
+    }
+}
+@media screen and (max-width:1600px) {
+    .ppj-point{
+        grid-template-columns: repeat(auto-fit, minmax(45%, 1fr));;
+    }
+}
+@media screen and (max-width:1080px) {
+    .ppj-point{
+        grid-template-columns: repeat(auto-fit, minmax(99%, 1fr));;
+    }
+}
